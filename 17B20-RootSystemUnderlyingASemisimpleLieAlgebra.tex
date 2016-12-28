@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RootSystemUnderlyingASemisimpleLieAlgebra}
+\pmcreated{2013-03-22 15:28:59}
+\pmmodified{2013-03-22 15:28:59}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{root system underlying a semi-simple Lie algebra}
+\pmrecord{7}{37338}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B20}
+\pmrelated{SimpleAndSemiSimpleLieAlgebras2}
+\pmdefines{Serre relations}
+\pmdefines{Chevalley-Serre relations}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\Cset}{\mathbb{C}}
+
+\newcommand{\fg}{\mathfrak{g}}
+\newcommand{\fh}{\mathfrak{h}}
+\DeclareMathOperator{\ad}{ad}
+\begin{document}
+Crystallographic, reduced root systems are in one-to-one
+correspondence with semi-simple, complex Lie algebras.  First, let us
+describe how one passes from a Lie algebra to a root system. Let $\fg$
+be a semi-simple, complex Lie algebra and let $\fh$ be a Cartan
+subalgebra.  Since $\fg$ is semi-simple, $\fh$ is abelian.  Moreover,
+$\fh$ acts on $\fg$ (via the adjoint representation) by commuting,
+simultaneously diagonalizable linear maps.  The simultaneous
+eigenspaces of this $\fh$ action are called {\em root spaces}, and the
+decomposition of $\fg$ into $\fh$ and the root spaces is called a {\em
+  root decomposition} of $\fg$. To be more precise, for
+$\lambda\in\fh^*$, set $$\fg_\lambda=\{a\in\fg \colon [h,a] =
+\lambda(h) a \text{ for all } h\in \fh\}.$$
+We call a non-zero
+$\lambda\in\fh^*$ a root if $\fg_\lambda$ is non-trivial, in which
+case $\fg_\lambda$ is called a root space.  It is possible to show
+that that $\fg_0$ is just the Cartan subalgebra $\fh$, and that
+$\dim\fg_\lambda=1$ for each root $\lambda$.  Letting $R\subset\fh^*$
+denote the set of all roots, we have $$\fg=\fh\oplus
+\bigoplus_{\lambda\in R} \fg_\lambda.$$
+
+The Cartan subalgebra $\fh$ has a natural inner product, called the
+Killing form, which in turn induces an inner product on $\fh^*$. It is
+possible to show that, with respect to this inner product, $R$ is a
+reduced, crystallographic root system.
+
+Conversely, let $R\subset E$ be a reduced, crystallographic root
+system. Let $\Delta$ be a base of positive roots.  We define a Lie
+algebra by taking generators
+\[H_\lambda,X_\lambda,Y_\lambda,\quad \lambda\in \Delta,\]
+subject to the following relations:
+\begin{align*}
+  [H_\lambda,H_\mu]&=0,\\
+  [H_\mu,X_\lambda]&=(\lambda,\mu) X_\lambda,\\
+  [H_\mu,Y_\lambda]&=-(\lambda,\mu) Y_{\lambda},\\
+  [X_\lambda,Y_\lambda] &= H_\lambda,\\
+  [X_\lambda,Y_\mu] &= 0,\quad \lambda\neq \mu;\\
+  (\ad X_\lambda)^{-(\lambda,\mu)+1} (X_\mu) &= 0,\quad \lambda\neq \mu,\\
+  (\ad Y_\lambda)^{-(\lambda,\mu)+1}(Y_\mu) &= 0,\quad \lambda\neq \mu,\\
+\end{align*}
+The above are known as the Chevalley-Serre relations The resulting Lie
+algebra turns out to be semi-simple, with a root system isomorphic to
+the given $R$.
+
+
+Thanks to the above isomorphism, to the difficult task of classifying
+complex semi-simple Lie algebras is transformed into the somewhat
+easier task of classifying crystallographic, reduced roots systems.
+Furthermore, a complex Lie algebra is simple if and only if the
+corresponding root system is indecomposable.  Thus, we only need to
+classify indecomposable root systems, since all other root systems and
+semi-simple Lie algebras are built out of these.
+%%%%%
+%%%%%
+\end{document}

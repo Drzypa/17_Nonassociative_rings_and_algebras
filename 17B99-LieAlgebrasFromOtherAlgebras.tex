@@ -1,0 +1,324 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LieAlgebrasFromOtherAlgebras}
+\pmcreated{2013-03-22 16:37:33}
+\pmmodified{2013-03-22 16:37:33}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{Lie algebras from other algebras}
+\pmrecord{8}{38825}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B99}
+%\pmkeywords{Lie algebra}
+%\pmkeywords{associative envelope}
+%\pmkeywords{universal enveloping algebra}
+\pmrelated{Algebras2}
+\pmdefines{associative envelope}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Alt}{Alt}
+\DeclareMathOperator{\sgn}{sign}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+\section{Lie algebras from associative algebras}
+
+Given an associative (unital) algebra $A$ over a commutative ring $R$, we define $A^-$ as the $R$-module $A$ together with a new multiplication $[,]:A\times A\rightarrow A$ derived from the associative multiplication as follows:
+    \[[a,b]=ab-ba.\]
+This operation is commonly called the \emph{commutator bracket} on $A$.
+
+\begin{prop}
+$A^-$ is a Lie algebra.
+\end{prop}
+\begin{proof}
+We already know $A^-$ is a module so we need simply to confirm that the commutator
+bracket is a bilinear mapping and then demonstrate that it is alternating and satisfies the Jacobi identity.
+
+Given $a,b,c\in A$, and $l\in R$ then 
+\[[la+b,c]=(la+b)c-c(la+b)=l(ac-ca)+(bc-cb)=l[a,c]+[b,c].\]
+The similar argument in the second variable shows that the operation is
+bilinear.
+
+Next, $[x,x]=xx-xx=0$ so $[,]$ is alternating.  Finally for the Jacobi 
+identity we compute directly.
+\begin{multline*}
+[[a,b],c]+[[b,c],a]+[[c,a],b] =
+  (ab-ba)c-c(ab-ba)+(bc-cb)a-a(bc-cb)+(ca-ac)b-b(ca-ac)\\
+ = abc-bac-cab+cba+bca-cba-abc+acb+cab-acb-bca+bac=0.
+\end{multline*}
+\end{proof}
+
+We notice this produces a functor from the category of associative algebras
+to the category of Lie algebras.  However, to every commutative algebra
+$A$, $A^-$ is a trivial Lie algebra, and so this functor is not faithful.
+More generally, the center of an arbitrary associative algebra $A$ is lost
+to the Lie algebra structure $A^-$.
+
+We do observe some relationships between the algebraic structure of $A$ and
+that of $A^-$.
+
+\begin{thm}\label{thm:ideals}
+If $I\normaleq A$ then $I\normal A^-$.
+\end{thm}
+\begin{proof}
+We observe that a submodule of $A$ is a submodule of $A^-$ as the two are 
+identitcal as modules.  It remains to show $[I,A^-]\leq I$.  So given
+$a\in I$ and $b\in A$, then $[a,b]=ab-ba$ and as $ab,ba\in I$ we conclude
+$[a,b]\in I$.
+\end{proof}
+
+\section{Associative envelopes}
+
+Given a Lie algebra $\mathfrak{g}$ it is often desirable to reverse the process
+described above, that is, to provide an associative algebra $A$ for which
+$\mathfrak{g}=A^-$.  In general this is impossible as we will now explain.
+
+Let $V$ be a vector space and $A$ the endomorphism algebra on $V$.  Then we
+give the name $\mathfrak{gl}(V)$ to the Lie algebra $A^-$ (noting that $A$ is
+associative under the composition of functions operation.)  Then we can also
+define a subalgebra $\mathfrak{sl}(V)$ as the set of linear transformations
+with trace 0.
+
+Now we claim that $\mathfrak{sl}_2(\mathbb{C})$ is not equal to $B^-$ for any associative (unital) algebra $B$.  For it is easy to see $\mathfrak{sl}_2(\mathbb{C})$ has a basis of
+three elements:
+\[e=\begin{bmatrix} 0 & 1\\ 0 & 0\end{bmatrix},\qquad
+h=\begin{bmatrix} 1 & 0 \\ 0 & -1\end{bmatrix},\qquad
+f=\begin{bmatrix} 0 & 0 \\ 1 & 0\end{bmatrix}.\]
+Therefore $B$ would also be 3-dimensional.  We also know that $\mathfrak{sl}_2(\mathbb{C})$ is a simple Lie algebra, that is, it has no 
+proper ideals.  Therefore by Theorem \ref{thm:ideals}, $B$ can have no 
+ideals either, so $B$ must be simple.  However the finite dimensional 
+simple rings over $\mathbb{C}$ are isomorphic to matrix rings (by the Wedderburn-Artin theorem) 
+$M_n(\mathbb{C})$ and thus cannot have dimension 3.
+
+This forces the weaker question as to whether a Lie algebra can be embedded
+in $A^-$ for some associative algebra $A$.  We call such embeddings \emph{
+associative envelopes} of the Lie aglebra.  The existence of associative
+envelopes of arbitrary Lie algebras is answered by a corollary
+to the Poincare-Birkhoff-Witt theorem.
+
+\begin{thm}
+Every Lie algebra $\mathfrak{g}$ embeds in the universal enveloping algebra $\mathfrak{U(g)}^-$, where $\mathfrak{U(g)}$ is an associative algebra.
+\end{thm}
+
+Finite dimensional analogues also exist, some of which are simpler to 
+observe.  For instance, a Lie aglebra $\mathfrak{g}$ can be represented in $\mathfrak{gl(g)}$ by the adjoint representation.  The representation is
+not faithful unless the center of $\mathfrak{g}$ is trivial.  However, 
+for semi-simple Lie algebras, the adjoint representation thus suffices
+as an associative envelope.
+
+\begin{remark}
+This result is in contrast to Jordan algebras where there are isomorphism types (for example $3\times 3$ matrices over the octonions) which cannot be embedded
+in $A^+$ for any associative algebra $A$.  [$A^+$ is the derived algebra 
+of $A$ under the product $a.b=ab+ba$.]
+\end{remark}
+
+\subsection{Lie algebra from non-associative algebras}
+
+If $A$ is not an associative algebra to begin with then we may still determine
+the commutator bracket is bilinear and alternating.  However, the Jacobi
+identity is in question.  If we define the \emph{associator bracket} as $[a,b,c]=(ab)c-a(bc)$ then we can write the computation for the Jacobi
+identity as:
+\begin{multline*}
+[[a,b],c]+[[b,c],a]+[[c,a],b] =
+  (ab-ba)c-c(ab-ba)+(bc-cb)a-a(bc-cb)+(ca-ac)b-b(ca-ac)\\
+  = (ab)c-(ba)c-c(ab)+c(ba)+(bc)a-(cb)a-a(bc)+a(cb)+(ca)b-(ac)b-b(ca)+b(ac)\\
+  = ((ab)c-a(bc)) + ((bc)a-b(ca)) + ((ca)b-c(ab)) - ((ba)c-b(ac)) - ((cb)a-c(ba))
+     -((ac)b-a(cb))\\
+  = [a,b,c]+[b,c,a]+[c,a,b]-[b,a,c]-[c,b,a]-[a,c,b].
+\end{multline*}
+We can write this right hand side using permutations on the set $\{a,b,c\}$
+as:
+\[
+\sum_{\sigma\in\Alt(\{a,b,c\})} [[a\sigma,b\sigma],c\sigma]
+=[a,b],c]+[[b,c],a]+[[c,a],b] =
+\sum_{\sigma\in \Sym(\{a,b,c\})} \sgn(\sigma)[a\sigma, b\sigma, c\sigma].
+\]
+That is, in a non-associative algebra the corresponding Jacobi identity
+is the possibly non-trivial sum over all permutations of associators.
+We consider a few non-associative examples.
+
+\begin{itemize}
+\item If $A$ is a commutative non-associative algebra (perhaps a Jordan algebra) then 
+   \[[a,b,c]=(ab)c-a(bc)=(ba)c-(bc)a=c(ba)-(cb)a=[c,b,a]\]
+so the Jacobi identity holds.  However, if $A$ is commutative
+then $[a,b]=0$ to begin with so the associated Lie algebra product is
+trivial.
+
+\item If $A$ is an alternative algebra, so $[a,b,c]=-[b,a,c]$, then again
+the Jacobi identity holds.  So $A^-$ is a Lie algebra.  The typicall non-associative examples of an alternative algebra are the octonion algebras.
+These produce a non-trivial Lie algebra.
+
+\item We can also consider beginning with a Lie algebra $A$ and producing
+$A^-$.  To avoid confusing the bracket of $A$ and that of $A^-$ we let the
+multiplication of $A$ be denoted by juxtaposition, $ab$, $a,b\in A$.  Recall
+that in a Lie algebra of characteristic 0 or odd then $ab=-ba$ so that
+$[a,b]=ab-ba=2ab$ in $A^-$.  So we have simply scaled the original product
+of $A$ by $2$.  To see the Jacobi identity still holds we note
+   \[[a,b,c]=(ab)c-a(bc)=-(ba)c+(bc)a=c(ba)-(cb)a=[c,b,a].\]
+So once again the associators cancel.
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

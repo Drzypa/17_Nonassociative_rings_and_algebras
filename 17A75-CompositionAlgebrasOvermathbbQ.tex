@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompositionAlgebrasOvermathbbQ}
+\pmcreated{2013-03-22 17:18:29}
+\pmmodified{2013-03-22 17:18:29}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{composition algebras over $\mathbb{Q}$}
+\pmrecord{6}{39656}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17A75}
+\pmrelated{HurwitzsTheorem}
+\pmrelated{JacobsonsTheoremOnCompositionAlgebras}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+\newcommand{\CayDick}[2]{\left(\frac{#1}{#2}\right)}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+\begin{thm}
+There are infinitely many composition algebras over $\mathbb{Q}$.
+\end{thm}
+\begin{proof}
+Every quadratic extension of $\mathbb{Q}$ is a distinct composition algebra.  For example,
+$\CayDick{p}{\mathbb{Q}}$ for $p$ a prime number.  This is sufficient to illustrate an infinite
+number of quadratic composition algebras. 
+\end{proof}
+The other families of composition algebras also have an infinite number of non-isomorphic 
+division algebras though the proofs are more involved.  It suffices to show provide
+an infinite family of non-isometric quadratic forms of the form: 
+       \[N_{p,q}(a,b,c,d)=a^2-b^2 p-c^2 q+d^2 pq\]
+for rational numbers $p$ and $q$.  Such questions can involve complex number theory as
+for instance, if $p$ is a prime congruent to $1$ modulo $4$ then
+$N_{-1,-p}$ is isometric to $N_{-1,-1}$ and thus $N_{-1,-p}$ is isometric to $N_{-1,-q}$ for
+any other prime $q\equiv 1\pmod{4}$.  But if $p\equiv 3\pmod{4}$ then this cannot be said.
+%%%%%
+%%%%%
+\end{document}

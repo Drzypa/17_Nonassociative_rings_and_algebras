@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Octonion}
+\pmcreated{2013-03-22 15:21:42}
+\pmmodified{2013-03-22 15:21:42}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{octonion}
+\pmrecord{15}{37185}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17A75}
+\pmclassification{msc}{17D05}
+\pmsynonym{Cayley algebra}{Octonion}
+\pmrelated{TheoremsOnSumsOfSquares}
+\pmrelated{DivisionAlgebra}
+\pmdefines{octonion algebra}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tabls}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{H}}
+\newcommand{\Oc}{\mathbb{O}}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\begin{document}
+Let $\Q$ be the quaternions over the reals $\R$.  Apply the
+Cayley-Dickson construction to $\Q$ once, and we obtain an algebra,
+variously called \emph{Cayley algebra}, \emph{the octonion algebra}, or simply \emph{the octonions}, over $\R$.  Specifically the construction is carried out as follows:
+\begin{enumerate}
+\item Form the vector space $\Oc=\Q\oplus\Q\mathbf{k}$; any element of
+$\Oc$ can be written as $a+b\mathbf{k}$, where $a,b\in\Q$;
+\item Define a binary operation on $\Oc$ called \emph{the multiplication in
+$\Oc$} by
+$$(a+b\mathbf{k})(c+d\mathbf{k}):=(ac-\conj{d}b)+(da+b\conj{c})\mathbf{k},$$
+where $a,b,c,d\in\Q$, and $\conj{c}$ is the quaternionic conjugation
+of $c\in\Q$. When $b=d=0$, the multiplication is reduced the
+multiplication in $\Q$. In addition, the multiplication rule above
+imply the following:
+\begin{eqnarray}
+a(d\mathbf{k})=(da)\mathbf{k} \\
+(b\mathbf{k})c=(b\conj{c})\mathbf{k} \\
+(b\mathbf{k})(d\mathbf{k})=-\conj{d}b.
+\end{eqnarray}
+In particular, in the last equation, if $b=d=1$, $\mathbf{k}^2=-1$.
+\item Define a unary operation on $\Oc$ called \emph{the octonionic
+conjugation in $\Oc$} by
+$$\overline{a+b\mathbf{k}}:=\conj{a}-b\mathbf{k},$$  where $a,b\in\Q$.
+Clearly, the octonionic conjugation is an \PMlinkname{involution}{Involution2}
+($\overline{\conj{x}}=x$).
+\item Finally, define a unary operation $N$ on $\Oc$ called \emph{the norm in
+$\Oc$} by $N(x):=x\conj{x}$, where $x\in\Oc$. Write
+$x=a+b\mathbf{k}$, then $$N(x)=(a+b\mathbf{k})(\conj{a}-b\mathbf{k})
+=(a\conj{a}+\conj{b}b)+(-ba+b\conj{\conj{a}})\mathbf{k}=
+a\conj{a}+b\conj{b}\ge0.$$
+It is not hard to see that $N(x)=0$ iff $x=0$.
+\end{enumerate}
+The above four (actually, only the first two suffice) steps makes
+$\Oc$ into an $8$-dimensional algebra over $\R$ such that $\Q$ is
+embedded as a subalgebra.
+\\\\
+With the last two steps, one can define the inverse of a non-zero
+element $x\in\Oc$ by $$x^{-1}:=\frac{\conj{x}}{N(x)}$$ so that
+$xx^{-1}=x^{-1}x=1$.  Since $x$ is arbitrary, $\Oc$ has no zero
+divisors.  Upon checking that $x^{-1}(xy)=y=(yx)x^{-1}$, the non-associative algebra $\Oc$ is turned into a division algebra.
+\\\\
+Since $N(x)\ge0$ for any $x\in\Oc$, we can define a non-negative
+real-valued function $\norm{\cdot}$ on $\Oc$ by $\norm{x}=
+\sqrt{N(x)}$. This is clearly well-defined and $\norm{x}=0$ iff
+$x=0$.  In addition, it is not hard to see that, for any $r\in\R$
+and $x\in\Oc$, $\norm{rx}= \abs{r}\norm{x}$, and that $\norm{\cdot}$
+satisfies the triangular inequality. This makes $\Oc$ into a normed
+division algebra.
+\\\\
+Since the multiplication in $\Q$ is noncommutative, $\Oc$ is
+noncommutative.  In fact, if we write $\Q=\C\oplus\C\mathbf{j}$,
+where $\C$ are the complex numbers and $\mathbf{j}^2=-1$, then
+$B=\lbrace 1,\mathbf{i},\mathbf{j},\mathbf{ij}\rbrace$ is a basis
+for the vector space $\Q$ over $\mathbb{R}$.  With the introduction
+of $\mathbf{k}\in\Oc$, we quickly check that $\mathbf{k}$
+anti-commute with the non-real basis elements in $B$:
+$$\mathbf{ik=-ki},\qquad\mathbf{jk=-kj},\qquad\mathbf{(ij)k=-k(ij)}.$$
+Furthermore, one checks that $\mathbf{i(jk)=(ji)k=-(ij)k}$, so that
+$\Oc$ is not associative.
+\\\\
+Since $\Oc=\Q\oplus\Q\mathbf{k}$, the set $\lbrace
+1,\mathbf{i,j,ij,k,ik,jk,(ij)k}\rbrace$($=B\cup B\mathbf{k}$) is a
+basis for $\Oc$ over $\R$. A less messy way to represent these basis
+elements is done the following assignment:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline basis element & $1$ & $\mathbf{i}$ & $\mathbf{j}$ &
+$\mathbf{ij}$ & $\mathbf{k}$ & $\mathbf{ik}$ & $\mathbf{jk}$ &
+$\mathbf{(ij)k}$\\
+\hline basis element rewritten & $\mathbf{i_0}$ & $\mathbf{i_1}$ &
+$\mathbf{i_2}$ & $\mathbf{i_3}$ & $\mathbf{i_4}$ & $\mathbf{i_5}$
+& $\mathbf{i_6}$ & $\mathbf{i_7}$ \\
+\hline
+\end{tabular}
+\end{center}
+Any element $x$ of $\Oc$ can thus be expressed uniquely as
+$\sum_{n=0}^{7}r_n\mathbf{i_n}$, where $r_n\in\R$.  Using Equations
+(1)-(3) above, one can form a multiplication table for these basis
+elements $i_n$'s:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline row$\times$column & $\mathbf{i_1}$ & $\mathbf{i_2}$ & $\mathbf{i_3}$ & $\mathbf{i_4}$ & $\mathbf{i_5}$ & $\mathbf{i_6}$ & $\mathbf{i_7}$ \\
+\hline $\mathbf{i_1}$ & -1 & $\mathbf{i_3}$ & -$\mathbf{i_2}$ & $\mathbf{i_5}$ & -$\mathbf{i_4}$ & -$\mathbf{i_7}$ & $\mathbf{i_6}$ \\
+\hline $\mathbf{i_2}$ & -$\mathbf{i_3}$ & -1 & $\mathbf{i_1}$ & $\mathbf{i_6}$ & $\mathbf{i_7}$ & -$\mathbf{i_4}$ & -$\mathbf{i_5}$ \\
+\hline $\mathbf{i_3}$ & $\mathbf{i_2}$ & -$\mathbf{i_1}$ & -1 & $\mathbf{i_7}$ & -$\mathbf{i_6}$ & $\mathbf{i_5}$ & -$\mathbf{i_4}$ \\
+\hline $\mathbf{i_4}$ & -$\mathbf{i_5}$ & -$\mathbf{i_6}$ & -$\mathbf{i_7}$ & -1 & $\mathbf{i_1}$ & $\mathbf{i_2}$ & $\mathbf{i_3}$ \\
+\hline $\mathbf{i_5}$ & $\mathbf{i_4}$ & -$\mathbf{i_7}$ & $\mathbf{i_6}$ & -$\mathbf{i_1}$ & -1 & -$\mathbf{i_3}$ & $\mathbf{i_2}$ \\
+\hline $\mathbf{i_6}$ & $\mathbf{i_7}$ & $\mathbf{i_4}$ & -$\mathbf{i_5}$ & -$\mathbf{i_2}$ & $\mathbf{i_3}$ & -1 & -$\mathbf{i_1}$ \\
+\hline $\mathbf{i_7}$ & -$\mathbf{i_6}$ & $\mathbf{i_5}$ & $\mathbf{i_4}$ & -$\mathbf{i_3}$ & -$\mathbf{i_2}$ & $\mathbf{i_1}$ & -1 \\
+\hline
+\end{tabular}
+\end{center}
+Other well known properties of the octonions are
+\begin{enumerate}
+\item $\conj{xy}=\conj{y}\hspace{2pt}\conj{x}$ for any $x,y\in\Oc$.
+\item $N(xy)=N(x)N(y)$ so that $\Oc$ is a composition algebra.  It also proves that the product of sums of eight squares is a sum of eight squares.
+\item $\Oc$ is an alternative algebra.  As a result, any two elements of $\Oc$ generate an associative algebra.  If fact, the algebra is isomorphic of one of $\R$, $\C$, and $\Q$.  This is the consequence of \PMlinkname{Artin's Theorem}{ArtinsTheoremOnAlternativeAlgebras}.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

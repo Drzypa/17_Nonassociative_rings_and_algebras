@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CommutatorBracket}
+\pmcreated{2013-03-22 12:33:51}
+\pmmodified{2013-03-22 12:33:51}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{commutator bracket}
+\pmrecord{8}{32811}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17A01}
+\pmclassification{msc}{17B05}
+\pmclassification{msc}{18A40}
+\pmrelated{LieAlgebra}
+\pmdefines{commutator Lie algebra}
+\pmdefines{commutator}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\End}{\mathrm{End}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+Let $A$ be an associative algebra over a field $K$.  For $a,b \in A$,
+the element of $A$ defined by
+$$[a,b]=ab-ba$$
+is called the {\em commutator} of $a$ and $b$.
+The corresponding bilinear operation
+$$[-,-]: A\times A\rightarrow A$$
+is called the commutator bracket.
+
+The commutator bracket is bilinear, skew-symmetric, and also satisfies
+the Jacobi identity.  To wit, for $a,b,c\in A$ we have
+$$[a,[b,c]] + [b,[c,a]] + [c,[a,b]] = 0.$$
+The proof of this assertion is straightforward.  Each of the brackets in
+the left-hand side expands to 4 terms, and then everything cancels.
+
+In categorical terms, what we have here is a functor from the category
+of associative algebras to the category of Lie algebras over a fixed
+field.  The action of this functor is to turn an associative algebra
+$A$ into a Lie algebra that has the same underlying vector space as
+$A$, but whose multiplication operation is given by the commutator
+bracket.  It must be noted that this functor is right-adjoint to the
+universal enveloping algebra functor.
+
+\paragraph{Examples}
+\begin{itemize}
+\item 
+Let $V$ be a vector space.  Composition endows the vector space of
+endomorphisms $\End V$ with the structure of an associative algebra.
+However, we could also regard $\End V$ as a Lie algebra relative to
+the commutator bracket:
+$$[X,Y] = XY-YX,\quad X,Y\in \End V.$$
+\item The algebra of differential operators has some interesting
+  properties when viewed as a Lie algebra.  The fact is that even
+  though the composition of differential operators is a
+  non-commutative operation, it is commutative when restricted to the
+  highest order terms of the involved operators.  Thus, if $X, Y$ are
+  differential operators of order $p$ and $q$, respectively, the
+  compositions $XY$ and $YX$ have order $p+q$.  Their highest order
+  term coincides, and hence the commutator $[X,Y]$ has order $p+q-1$.
+\item In light of the preceding comments, it is evident that the
+  vector space of first-order differential operators is closed with
+  respect to the commutator bracket.  Specializing even further we
+  remark that, a vector field is just a homogeneous first-order
+  differential operator, and that the commutator bracket for vector
+  fields, when viewed as first-order operators, coincides with the
+  usual, geometrically motivated vector field bracket.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

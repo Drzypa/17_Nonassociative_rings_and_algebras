@@ -1,0 +1,229 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TraceFormsOnAlgebras}
+\pmcreated{2013-03-22 16:28:01}
+\pmmodified{2013-03-22 16:28:01}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{trace forms on algebras}
+\pmrecord{4}{38627}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17A01}
+\pmdefines{regular representation}
+\pmdefines{trace form}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ad}{ad~}
+\DeclareMathOperator{\tr}{tr~}
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+Given an finite dimensional algebra $A$ over a field $k$ we define the 
+left(right) regular representation of $A$ as the map $L:A\rightarrow \End_k A$
+given by $L_a b:=ab$ ($R_a b:=ba$).  
+
+\begin{ex}
+In a Lie algebra the left representation is called the \emph{adjoint}
+representation and denoted $\ad~x$ and defined $(\ad~x)(y)=[x,y]$.  Because
+$[x,y]=-[y,x]$ in characteristic not 2, there is generally no distinction of
+left/right adjoint representations.
+\end{ex}
+
+The \emph{trace form} of $A$ is defined as 
+$\langle,\rangle:T\times T\rightarrow k$:
+  \[\langle a,b\rangle:=\tr(L_a L_b).\]
+
+\begin{prop}
+The trace form is a symmetric bilinear form.
+\end{prop}
+\begin{proof}
+Given $a,b,x\in A$ and $l\in k$ then $L_{a+lb} x=(a+lb)x=ax+lbx=L_{a}x+lL_{b}x$.
+So $L_{a+lb}=L_a+lL_b$.  So we have
+   \[\langle a+lb,x\rangle=\tr(L_{a+lb}L_x)=\tr(L_a L_x+lL_b L_x)
+            =\tr(L_a L_x)+l\tr(L_b L_x)=\langle a,x\rangle
+                      +l\langle b,x\rangle.\]
+Furthermore, $\tr(fg)=\tr(gf)$ is general property of traces, thus
+  \[\langle a,b\rangle=\tr(L_a L_b)=\tr(L_bL_a)=\langle b,a\rangle.\]
+So the trace form is a symmetric bilinear form.
+\end{proof}
+
+The symmetric property can be interpreted as a weak form of commutativity of
+the product: $a,b\in A$ commute within their trace from.  A more essential
+property arises for certain algebras and can be interpreted as ``the product
+is associative within the trace'' and written as
+\begin{equation}\label{eq:assoc}
+\langle ab,c\rangle=\langle a,bc\rangle.
+\end{equation}
+We shall call such an algebra \emph{weakly associative} though the term is not standard.
+
+This property is clear for all associative algebras as:
+\[L_{ab}L_c(x)=((ab)c)x=(a(bc))x=L_a L_{bc} x.\]
+When we use a Lie algebra, the trace form is commonly called the \emph{Killing form} which has property (\ref{eq:assoc}).  A result of Koecher shows that Jordan algebras also have this property.
+
+\begin{prop}
+Given a weakly associative algebra, then the radical of the trace form
+is an ideal of the algebra. 
+\end{prop}
+\begin{proof}
+We know the radical of form $R$ is a subspace so we must simply show that
+$R$ is an ideal.  Given $x\in R$ and $y\in A$ then for all $z\in A$,
+$\langle xy,z\rangle=\langle x,yz\rangle=0$.  Thus $xy\in R$.  Likewise
+$yz\in R$ so $R$ is a two-sided ideal of $A$.
+\end{proof}
+
+From this result many authors define an algebra to be semi-simple if its trace
+form is non-degenerate.  In this way, $A/R$, $R$ the radical of $A$, is semi-simple.  [Some variations on this definition are often required over small
+fields/characteristics, especially when characteristic is 2.]
+
+More can be said when ideals are considered.
+
+\begin{prop}
+Given a weakly associative algebra $A$, then
+if $I$ is an ideal of $A$ then so is $I^\perp$.
+\end{prop}
+\begin{proof}
+Given $a\in I^\perp$, then for all $b\in A$ and $c\in I$, then $bc\in I$
+as $I$ is an ideal and so $\langle ab,c\rangle=\langle a,bc\rangle=0$
+as $a\in I^\perp$.  This makes $ab\in I^\perp$ so $I$ is a right ideal.
+Likewise $\langle c,ba\rangle=\langle cb,a\rangle=0$ so $ba\in I^\perp$ and
+thus $I^\perp$ is an ideal of $A$.
+\end{proof}
+
+To proceed one factors out the radical so that $A$ is semisimple.  Then
+given an ideal $I$ of $A$, if $I\intersect I^\perp=0$ then as the trace form
+is a non-degenerate bilinear from, $A=I\oplus I^\perp$, and so by iterating
+we produce a decomposition of $A$ into minimal ideals:
+ \[A=A_1\oplus \cdots\oplus A_s.\]
+Hence we arrive at the alternative definition of a semisimple algebra: that the
+algebra be a direct product of simple algebras.  To obtain the property $I\intersect I^\perp=0$ it is sufficient to assume $A$ has not ideal $I$ 
+such that $I^2=0$.  This is the content of the proof in
+
+\begin{thm}\cite[Thm III.3]{Jac}
+Let $A$ be a finite-dimensional weakly associative (trace) semisimple 
+algebra over a field $k$ in which no ideal $I\neq 0$ of $A$ has $I^2=0$,
+then $A$ is a direct product of minimal ideals, that is, of simple
+algebras.
+\end{thm}
+
+Alternatively any bilinear form with (\ref{eq:assoc}) can be used.  However,
+the trace form is always definable and the desired properties are easily translated into implications about the multiplication of the algebra.
+
+\begin{thebibliography}{8}
+\bibitem{Jac}
+Jacobson, Nathan \emph{Lie Algebras}, Interscience Publishers, New York, 1962.\\
+
+\bibitem{Koe}
+Koecher, Max, \emph{The Minnesota notes on Jordan algebras and their applications}. 
+	Edited and annotated by Aloys Krieg and Sebastian Walcher. 
+	[B] Lecture Notes in Mathematics 1710. Berlin: Springer. (1999).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

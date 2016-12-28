@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExtendedCartanMatrix}
+\pmcreated{2013-03-22 15:30:14}
+\pmmodified{2013-03-22 15:30:14}
+\pmowner{benjaminfjones}{879}
+\pmmodifier{benjaminfjones}{879}
+\pmtitle{extended Cartan matrix}
+\pmrecord{8}{37363}
+\pmprivacy{1}
+\pmauthor{benjaminfjones}{879}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B67}
+%\pmkeywords{affine Kac-Moody Lie algebra}
+\pmrelated{GeneralizedCartanMatrix}
+\pmdefines{extended Cartan matrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $A$ be the Cartan matrix of a complex, semi-simple, finite dimensional, Lie algebra $\mathfrak{g}$. Recall that $A = (a_{ij})$ where $a_{ij} = \langle \alpha_i, \alpha_j^\vee \rangle$ where the $\alpha_i$ are simple roots for $\mathfrak{g}$ and the $\alpha_j^\vee$ are simple coroots. 
+The \emph{extended Cartan matrix} denoted $\hat A$ is obtained from $A$ by adding a zero-th row and column corresponding to adding a new simple root $\alpha_0 := -\theta$ where $\theta$ is the maximal (relative to $\left\{ \alpha_1,\ldots,\alpha_n \right\}$) root for $\mathfrak{g}$. $\theta$ can be defined as a root of $\mathfrak{g}$ such that when written in terms of simple roots $\theta = \sum_i m_i \alpha_i$ the coefficient sum $\sum_i m_i$ is maximal (i.e. it has maximal height). Such a root can be shown to be unique.
+
+The matrix $\hat A$ is an example of a generalized Cartan matrix. The corresponding Kac-Moody Lie algerba is said to be of affine type.
+
+For example if $\mathfrak{g} = \mathfrak{sl}_n \mathbb{C}$ then $\hat A$ is obtained from
+$A$ by adding a zero-th row: $(2,-1,0,\ldots,0,-1)$ and zero-th column $(2,-1,0,\ldots,0,-1)$ simultaneously to the Cartan matrix for $\mathfrak{sl}_n \mathbb{C}$. 
+
+
+\begin{thebibliography}{1}
+\bibitem{Kac}
+Victor Kac, \emph{Infinite Dimensional Lie Algebras}, Third edition. Cambridge University Press, Cambridge, 1990.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

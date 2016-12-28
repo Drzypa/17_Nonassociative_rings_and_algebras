@@ -1,0 +1,250 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomotopesAndIsotopesOfAlgebras}
+\pmcreated{2013-03-22 16:27:24}
+\pmmodified{2013-03-22 16:27:24}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{homotopes and isotopes of algebras}
+\pmrecord{6}{38614}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17A01}
+%\pmkeywords{quasi-invertible}
+%\pmkeywords{radical}
+\pmrelated{QuasiRegularity}
+\pmdefines{homotope}
+\pmdefines{isotope}
+\pmdefines{quasi-invertible}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+\section{Geometric motivations}
+
+In the study projective geometries a first step in developing 
+properties of the geometry is to uncover coordinates of the geometry. For example, Desargues' theorem (and Pappaus' theorem) are methods to uncover division rings(and fields) which can be used to coordinatize every line in the geometry -- that is, every line will be in a 1-1 correspondence with a fixed
+division ring (plus a formal $\infty$ point) called the \emph{coordinate ring} of the geometry.  Form this 
+one can often coordinatize the entire geometry, that is, represent the
+geometry as subspaces of a vector space over the division ring.  
+
+There is a common problem with these constructions: the coordinates depend
+on fixing reference points in the geometry.  If we change the reference
+points we change the product in the coordinate ring as well.  Fortunately,
+nice geometries generally do not allow for too much variance to occur with
+a change of reference points.  However, to track these geometric changes we
+create an algebraic process to restructure the multiplication of a fixed
+ring.  The process is called a \emph{homotope} of the algebra or an \emph{isotope} when the process is reversible.  These geometrically inspired
+terms reflect the original applications of the process, but in some theorems
+they now find multiple other applications unrelated to geometry.
+
+\section{Associative homotopes and isotopes}
+
+Given a unital associative algebra $A$ and an element $a\in A$, we define the 
+\emph{homotope} of $A$ as the algebra $A^{(a)}$ which retains the same module
+structure of $A$ but where we replace the multiplication by
+   \[x\cdot_{a} y:=xay,\qquad x,y\in A.\]
+By the assumption of associativity $xay$ makes sense.  A homotope is an \emph{isotope} if $a$ is invertible.  We now prove all isotopes are isomorphic 
+algebras.
+
+\begin{prop}
+If $a$ is invertible in $A$ then $A^{(a)}$ is isomorphic as algebras to $A$
+via the map $x\mapsto xa^{-1}$.  Furthermore, the identity of $A^{(a)}$ is
+$a^{-1}$.
+\end{prop}
+\begin{proof}
+As $a$ is invertible, the map we describe is an isomorphism of modules.
+To verify the multiplication let $x,y\in A$.  Then
+\[xa^{-1}\cdot_a ya^{-1} = xa^{-1} aya^{-1}=(xy)a^{-1}.\]
+Furthermore, $x\cdot_a a^{-1}=xaa^{-1}=x=a^{-1} ax=a^{-1}\cdot_a x$ so
+$a^{-1}$ is the identity of $A^{(a)}$.
+\end{proof}
+
+
+\section{Non-associative homotopes and isotopes}
+
+Returning to projective geometries, it is known that projective planes can
+include rather exceptional examples such as planes which do not satisfy 
+Desargues' theorem (and consequently they do not satisfy Pappaus' theorem).
+This means it is not possible to use the standard approach to apply coordinates rings to the lines of the geometry.  An example of these include certain
+Moufang planes.  This however is simply a lack of flexibility in the
+definition of coordinates.  For it is known that using Octonion's as a division
+algebra (non-associative) the Moufang planes can be coordinatized.  Therefore,
+the geometric process of isotopes and homotopes will force a construction
+of isotopes and homotopes of non-associative algebras.  
+
+For example, in a unital Jordan algebra $J$, a homotope/isotope can be built 
+by means of the Jordan triple product:
+\[x\circ_a y := \{x,a,y\}= (x.a).y+(a.x).y-(x.y).a\]
+which in a special Jordan algebra takes the more familiar form:
+\[x\circ_a y := \frac{1}{2}(xay+yax).\]
+We call this product the $a$-homotope of $J$ and denote it by $J^{(a)}$.
+When $a$ is invertible in the Jordan product then we call this an isotope of $J$.  Unlike associative algebras, an isotope of a Jordan algebra need not
+be an isomorphic algebra.
+
+\section{Non-geometric applications of homotopes}
+
+Given an element $x\in A$, we say $x$ is left/right \emph{quasi-invertible} 
+if for all $a\in A$, $1+ax$ and $xa+1$ are left and right invertible respectively.  It is a classic theorem that the Jacobson radical is 
+comprised of all left quasi-invertible elements.  McCrimmon showed 
+that expressed in homotopes we can instead say: $x$ is quasi-invertible 
+if $1+x$ is quasi-invertible in every homotope of $A$.   This gives the
+characterization:
+\begin{quote}
+The radical of an associative algebra is the set of elements $x\in A$ which
+are (left) quasi-invertible in every homotope of $A$.
+\end{quote}
+
+It is this version of an element description of Jacobson radicals which can be generalized to non-associative algebras.  First one must define homotopes and isotopes for the given non-associative algebra.  
+
+\begin{thm}[McCrimmon, Jacobson]
+The radical of a Jordan algebra $J$ is equivalently defined as:
+\begin{enumerate}
+\item The largest solvable ideal in $J$.
+\item The set of all elements $x\in J$ for which $1+x$ is invertible in
+every homotope of $J$.  We call such $x$ \emph{properly quasi-invertible}.
+\item The intersection of all maximal inner ideals of $J$.
+\end{enumerate}
+\end{thm}
+
+\section{Principal homotopes}
+
+So far we have used only a subset of all possible homotopes because we have
+insisted thus far that we use elements from the orignal algebra to induce the
+homotope.  These are what Albert calls a \emph{principal homotope}.  However,
+there are often reasons to allow for external parameters.  For example, if 
+a non-associative algebra $A$ is embedded in an associative envelope $U(A)$,
+one may use an element $u\in U(A)$ to induce a homotope or isotope of $A$.
+Another possible approach is to modify the terms of the product with 
+involutions $*$, for example,
+\[x\circ_a y := \frac{1}{2}(xay^*+yax^*).\]
+Such constructions require a more general treatment of homotopes and isotopes
+which leads to the general definition:
+
+\begin{defn}
+Given a non-associative $K$-algebra $A$, a homotope of $A$ is triple of 
+$K$-endomorphisms $f,g,h$ of $A$ such that:
+\[xf\circ yg=(x\circ y)h,\qquad x,y\in A.\]
+A homotope is an isotope if the maps $f$, $g$ and $h$ are invertible.
+\end{defn}
+
+\bibliographystyle{amsplain}
+\begin{thebibliography}{10}
+
+\bibitem{Jacobson}
+Jacobson, Nathan \emph{Structure Theory of Jordan Algebras}, The University of
+Arkansas Lecture Notes in Mathematics, vol. 5, Fayetteville, 1981.
+
+\bibitem{McCrimmon}
+McCrimmon, Kevin \emph{A Taste of Jordan Algebras}, Springer, New York, 2004.
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

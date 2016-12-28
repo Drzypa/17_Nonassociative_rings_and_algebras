@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RootSystem}
+\pmcreated{2013-03-22 13:11:30}
+\pmmodified{2013-03-22 13:11:30}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{root system}
+\pmrecord{13}{33645}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B20}
+\pmrelated{SimpleAndSemiSimpleLieAlgebras2}
+\pmrelated{LieAlgebra}
+\pmdefines{reduced root system}
+\pmdefines{root}
+\pmdefines{root space}
+\pmdefines{root decomposition}
+\pmdefines{indecomposable}
+\pmdefines{reduced}
+\pmdefines{crystallographic}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\begin{document}
+A root system is a key notion in the classification and the
+representation theory of reflection groups and of semi-simple Lie
+algebras.  Let $E$ be a Euclidean vector space with inner product
+$(\cdot,\cdot)$. A root system is a finite spanning set $R\subset E$
+such that for every $u\in R$, the orthogonal reflection $$v\mapsto
+v-2\frac{(u,v)}{(u,u)} u,\quad v\in E$$
+preserves $R$.
+
+A root system is called \emph{crystallographic} if
+$2\frac{(u,v)}{(u,u)}$ is an integer for all $u,v\in R$.
+
+A root system is called {\em reduced} if for all $u\in R$, we have
+$ku\in R$ for $k=\pm 1$ only.
+
+We call a root system {\em indecomposable} if there is no proper
+decomposition $R=R'\cup R''$ such that every vector in $R'$ is orthogonal to
+every vector in $R''$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,173 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ModularTheory}
+\pmcreated{2013-03-22 16:26:45}
+\pmmodified{2013-03-22 16:26:45}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{modular theory}
+\pmrecord{6}{38601}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B99}
+%\pmkeywords{modular representation}
+%\pmkeywords{modular theory}
+\pmrelated{RestrictedLieAlgebra}
+\pmdefines{modular theory}
+\pmdefines{modular representation}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+A representation of a group/algebra into $GL(V,k)$, $End_k V$, $\mathfrak{gl}_k(V)$, etc. is called \emph{modular} if the 
+characteristic of $k$ is positive.  An algebra $A$ is called 
+\emph{modular} if the characteristic of the field $k$ 
+is positive (thus prime for some $p$.)  As the algebra can be represented
+in $End_k A$ by left or right multiplication (often called the regular or 
+adjoint representation) this definition
+matches the requirements for a modular representation.
+
+\begin{remark}
+Modular representations and modular theory in this sense should not be confused with modular forms from number theory.  Though applications of one to another may exist, these two topics are generally unrelated.
+\end{remark}
+
+Typically theory for representations over fields of characteristic 0 cannot be
+transplanted directly to modular representations.  For example, Maschke's theorem, Lie's theorem, the use of the Killing form for a Lie algebra
+all fail in various ways in modular representations.  There are two common obstructions in modular representations.
+\begin{enumerate}
+\item A theorem/formula in characteristic 0 makes use of rational fractions
+$a/b$ where $p|b$.  Thus the fraction causes division by 0 over characteristic
+$p$.  Examples of this obstruction include Maschke's theorem and the definition
+of exponentials of nilpotent matrices.
+\item A theorem/formula involves polynomials which are inseparable, or have
+repeated roots over fields with positive characteristic.  This is especially
+problematic when the polynomials are the minimal or characteristic polynomials of linear transformations for this causes the rational canonical form and Jordan canonical form of the transforms to change.  Examples of this problem include Lie's theorem.
+\end{enumerate}
+
+There are also two common workarounds for these obstructions.
+\begin{enumerate}
+\item Treat the rational coefficients as formal coefficients.  For example, 
+start in characteristic 0 and define an integer subalgebra with basis elements of the form $\frac{x^n}{n!}$ (or similarly useful combinations.)  Then tensor (over $\mathbb{Z}$) the $\mathbb{Z}$-subalgebra with $k$.  Thus the fractions 
+of the form $1/n!$ are not actually coefficients in $k$ but formal coefficients and so they do not cause division by 0.  This technique is used in the theory 
+of Chevalley groups over arbitrary fields as it allows for version of the
+exponential of a nilpotent element of a Lie algebra.
+\item Make restrictions on the dimensions of the representation, for instance,
+$(p,\dim V)=1$ or $x^n=0$ for $n<p$ etc.  Thus the division by 0 and polynomial oddities are avoided.  For example, with Maschke's theorem the solution is to
+assume that the characteristic $p$ does not divide the order of the group $G$
+which is being represented.  The second approach to insist on large $p$ often
+excludes $p=2,3$ but provides workable results for $p\geq 5$, or 7, etc.  Then the small prime cases are studied as exceptional examples.
+\end{enumerate}
+
+There is a third problem which can arise for modular representations which has no obvious work around.  This is when the definition and/or theorems still work but their implications are useless.  
+
+For example, with the Killing form of a Lie algebra we take the trace of a linear transformation.  However, over characteristic $p$ it is possible for the identity matrix to have trace 0, for example, in dimension $d=mp$ for any integer $m$.   This situation cannot be be avoided as easily as with Maschke's theorem by assuming restrictions on the dimension of the representation.  For we can use $d=2$ and the diagonal matrix $Diag(1,p-1)$ to obtain a similar problem with the trace.  And this problem embeds into all higher dimensions thus a straight forward use of trace would work only in 1 dimensional representations.
+
+There is no problem with the definition of the Killing form for modular representations but the results may no longer be applicable.  In these situations usually entirely new approaches are required.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,377 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompositionAlgebra}
+\pmcreated{2013-03-22 15:11:33}
+\pmmodified{2013-03-22 15:11:33}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{composition algebra}
+\pmrecord{14}{36949}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17A75}
+%\pmkeywords{composition law}
+\pmrelated{TheoremsOnSumsOfSquares}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{enumerate}
+%%\usepackage{xypic}
+
+\DeclareMathOperator{\tr}{T}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+\newcommand{\CayDick}[2]{\left(\frac{#1}{#2}\right)}
+
+
+
+\begin{document}
+\section{Definition}
+
+The classical definition of a composition algebra is a
+non-associative algebra $C$ over a field $k$ where
+\begin{enumerate}
+\item $C$ admits a non-degenerate quadratic form $q:C\to k$, such
+that
+\item $q$ is multiplicative: $q(xy)=q(x)q(y)$.
+\end{enumerate}
+We also say $q$ permits composition or that it obeys the composition law.
+
+This definition is geometric in that quadratic forms give rise to geometric atributes
+for a vector space such as length, distance and orthogonality.  Indeed, originally created
+over the real numbers such properties seem appropriate for an algebra; however, concepts
+of length and distance are less appropriate over arbitrary fields and encourage a second
+equivalent definition based solely on the algebraic aspect of such algebras.
+
+Alternatively, a composition algebra can be defined as a unital alternative algebra $C$ 
+over a field $k$ with an involution $x\mapsto \bar{x}$, that is an anti-isomorphism
+of order at most 2, such that:
+\begin{enumerate}
+\item $C$ has no non-zero absolute zero divisors (that is, $(xa)x=0$ for all $a\in C$ implies $x=0$);
+\item the norm $N(x):=x\bar{x}$ is a scalar multiple of $1$, that is, $N:C\to k1$.
+\end{enumerate}
+
+The first definition makes the composition property part of the definition but obscures 
+the alternative multiplication as well as the existence of an involutary anti-isomorphism
+for the algebra.  The second definition makes both of these properties evident but obscures 
+the composition property of the norm, and also hides the property that $N$ is a quadratic form.
+However both definitions have merit, the first captures the classical view of an algebra 
+respecting a certain geometric condition while the second, introduced by Jacobson, promotes
+a purely algebraic treatment.  In our examples and constructions to follows we attempt to exhibit 
+both aspects by supplying the norm, the involution, and the product.
+
+Both definitions can be generalized to algebras over commutative unital rings $k$.
+
+Recall that a quadratic form gives rise to a symmetric bilinear from $b:C\times C\to k$ by
+$b(x,y)=q(x+y)-q(x)-q(y)$, for all $x,y\in C$.  Some of the immediate properties include:
+\begin{enumerate}
+\item $b(x,x)=2q(x)$, 
+\item $b(xz,yz)=b(x,y)q(z)$,
+\item $b(xy,zw)+b(xw,zy)=b(x,y)b(z,w)$.
+\end{enumerate}
+These strongly limit the structure of composition algebras
+and leads to the celebrated theorem of Hurwitz (see Theorem \ref{thm:Hurwitz}) 
+which suitably classifies the composition algebras over $\mathbb{R}$.  The work of
+many others including Albert, Dickson, Jacobson, and Kaplansky extended the essential
+conclussion of Hurwitz to all fields and the resulting generalization is still
+refered to as Hurwitz's theorem.
+
+There are other algebras $A$ with norms $q:A\to k$ which permit composition
+in the sense that $q(xy)=q(x)q(y)$.  For example, alternative algebras with involutions.
+However, the distinguishing property of composition algebras is that $q$ is a quadratic form.
+Classifications for such norms have been caried out by Schafer and McCrimmon.
+
+\section{Norms}
+
+Originally, composition algebras were created over the real numbers $k=\mathbb{R}$. 
+Here the usual positive definite norm on the real vector space was used instead of 
+the quadratic form (the square of the norm is the quadratic form).
+
+The first non-trivial example is the set of complex numbers $\mathbb{C}$ with where
+$z=a+bi\in\mathbb{C}$ is assigned:
+\begin{eqnarray*} 
+\bar{z} & =& a-bi;\\
+|z| & = & |a+bi|=\sqrt{a^2+b^2}=\sqrt{z\bar{z}}.
+\end{eqnarray*}
+
+More interesting is the non-commutative algebra of Hamiltonians 
+$\mathbb{H}$, created by Hamilton, where each $x\in\mathcal{H}$ has the form
+$x=a+bi+cj+dk$ and
+\begin{eqnarray*}
+\bar{x} & = & a-bi-cj-dk;\\
+|x| & = & |a+bi+cj+dk|=\sqrt{a^2+b^2+c^2+d^2}=\sqrt{x\bar{x}}.
+\end{eqnarray*} 
+
+The last addition to the list was the non-associative algebra of \emph{octonions}
+initially created by Cayley and the norm is simply 
+\begin{eqnarray*}
+  \bar{x} & = & a-bi-cj-dk-fil-gjl-hkl;\\
+  |x|&=&|a+bi+cj+dk+el+fil+gjl+hkl| \\ 
+     &=& \sqrt{a^2+b^2+c^2+d^2+e^2+f^2+g^2+h^2}=\sqrt{x\bar{x}}.
+\end{eqnarray*}
+
+Because general fields do not sufficient squareroots, the use of norms
+in the classical Euclidean sense is replaced by the use of quadratic forms.
+Furthermore, the lack of ordering a field, such as a finite field, introduces the
+need to use non-degenerate rather than positive definite conditions.  Under these 
+generalizations composition algebras can be redefined form the classical context
+of composition algebras over $\mathbb{R}$ to general composition algebras over
+arbitrary fields, as done by our original definitions above.  In this context, 
+there are three further composition algebras over $\mathbb{R}$.
+
+\begin{ex}
+Let $C=\mathbb{R}\oplus\mathbb{R}$ with $q(x,y)=xy$ for all
+$(x,y)\in C$.  Then $C$ is a composition algebra.
+\end{ex}
+\begin{proof}
+Evidently $q(ax,ay)=a^2 q(x,y)$ and the polarization of $q$ is the symmetric bilinear
+form $b((x,y),(z,w))=xz-yw$ for all $(x,y),(z,w)\in C$ (so the signature is $(1,-1)$).
+Thus $q$ is a quadratic form.
+
+To check that $q$ has the compositional property let $(x,y),(z,w)\in C$.  Then
+\begin{equation*}
+q((x,y)(z,w))
+    =q(xz,yw)=(xz)(yw)
+    =(xy)(zw)
+    =q(x,y)q(z,w).
+\end{equation*}
+
+Note also that by defining $\overline{(x,y)}=(y,x)$ then $(x,y)\overline{(x,y)}
+=(xy,yx)=q(x,y)(1,1)$ and $b((x,y),(z,w))(1,1)=(x,y)(z,w)+\overline{(x,y)(z,w)}$.
+\end{proof}
+
+\begin{ex}
+Let $C=M_2(\mathbb{R})$ with $q(X)=\det X$ for all $X\in C$.
+Then $C$ is a composition algebra.
+\end{ex}
+\begin{proof}
+Let $X\in C$ and $a\in \mathbb{R}$.  Then $q(aX)=\det (aX)=\det (aI_2)\det X=a^2\det X=a^2 q(X)$.
+It is also evident that if $X=\begin{bmatrix} a & b\\ c & d\end{bmatrix}$ then
+setting $\bar{X}=\begin{bmatrix} d & -b\\ -c & a\end{bmatrix}$ makes $(\det X)I_2=X\bar{X}$
+and also $\tr(X)I_2=X+\bar{X}$, where $\tr(X)$ is the trace of $X$.  Hence
+\begin{multline*}
+b(X,Y)=(q(X+Y)-q(X)-q(Y))I_2=(\det (X+Y))I_2-(\det X) I_2-(\det Y) I_2\\
+  =(X+Y)\overline{(X+Y)} - X \bar{X} - Y\bar{Y}\\
+  =Y\bar{X}+X\bar{Y}
+  =\tr (X\bar{Y})I_2.
+\end{multline*}
+Therefore, $b(X,Y)=\tr (X\bar{Y})$.  Since $\tr (X\bar{Y})=\tr (\bar{Y}X)=\tr(X\bar{Y})$, it follows
+that $b$ is a symmetric bilinear form and so $q$ is quadratic form.
+
+Finally, for composition note
+\begin{equation*}
+q(XY)
+    = \det(XY)
+    = det X\det Y
+    = q(X)q(Y).
+\end{equation*}
+Therefore $C$ is a composition algebra.
+\end{proof}
+
+This gives two new composition algebras over $\mathbb{R}$ and indeed there is a third, constructed
+below as the algebra $\CayDick{1,1,1}{\mathbb{R}}$, which is 8-dimensional and non-associative but
+unlike the octonions, it has non-trivial zero-divisors.
+
+\begin{defn}
+A composition algebra is \emph{split} if the quadratic form is isotropic.
+\end{defn}
+
+The example of $\mathbb{R}\oplus\mathbb{R}$ and $M_2(\mathbb{R})$ just given are both examples of
+split composition algebras.
+
+\section{Involution}
+
+Define
+	\[\bar{x} := b(x,1)1 - x,\qquad \forall x\in C.\]
+Immediately it follows that: for all $x,y\in C$,
+\begin{enumerate}
+\item $\overline{\bar{x}}=x$,
+\item $\overline{x+y}=\bar{x}+\bar{y}$,
+\item $\bar{1}=1$.
+\end{enumerate}
+
+Define the \emph{trace} of $x$ as $T(x)=x+\bar{x}$ and
+the \emph{norm} of $x$ as $N(x)=\bar{x}x$.  Then it follows that:
+	\[x^2-T(x)x+N(x)=0,\qquad \forall x\in C.\]
+So $C$ is a \emph{quadratic} algebra since every element in $x$ has at most
+a quadratic minimal polynomial.  In fact $N(x)$ is a quadratic form 
+allowing composition.
+
+\section{Constructing composition algebras}
+
+
+All of the following are composition algebras.
+\cite[III.4]{Schafer:nonass}
+\begin{description}
+\item[$\dim 1$:] $k$, with trivial involution $x=\bar{x}$ for all $x$ in $k$.
+\item[$\dim 2$:] For any $\alpha\in k$, a \emph{quadratic} extension of $k$, that is
+\[\CayDick{\alpha}{k}=\langle 1,i | i^2=\alpha\rangle.\]
+Here $\{1,i\}$ is a basis and has an involution defined by $\bar{1}=1$ and $\bar{i}=-i$.
+\item[$\dim 4$:] For any $\alpha,\beta\in k$, a \emph{quaternion} algebra over $k$ 
+defined as
+\[\CayDick{\alpha,\beta}{k}=\langle 1,i,j | i^2=\alpha, j^2=\beta, ij=-ji\rangle\]
+Then $\{1,i,j,ij\}$ forms a basis.\footnote{It is common to use $k$ for $ij$, but $k$ here is used
+exclusively for the underlying field.}  An involution is defined by $\bar{1}=1$, 
+$\bar{i}=-i$, $\bar{j}=-j$ and extended linearly.
+\item[$\dim 8$:] For any $\alpha,\beta,\gamma\in k$, an \emph{octonion} algebra over $k$:
+\begin{multline*}
+\CayDick{\alpha,\beta,\gamma}{k}=
+\langle 1,i,j,l | i^2=\alpha, j^2=\beta, l^2=\gamma,\quad
+	ij=-ji, il=-li, jl=-lj, \\
+	i(lj)=-l(ij), (li)j=l(ji), (li)(lj)=-\gamma ji
+	\rangle.
+\end{multline*}
+The set $\{1,i,j,ij,l,il,jl,ijl\}$ is a basis.
+An involution is defined by $\bar{1}=1$, $\bar{i}=-i$, $\bar{j}=-j$, $\bar{l}=-l$
+and extended linearly.
+\end{description}
+
+Each of these algebras can be realized by the Cayley-Dickson method which takes $C$ 
+an associative $k$-algebra with involution and produces for each $\alpha\in C-\{0\}$ a new 
+algebra $\CayDick{\alpha}{C}$ on the vector space $C\oplus C$ with product
+	\[(a,b)(c,d)=(ac+\alpha d \bar{b},\bar{a}d+cb).\]
+Set the involution on $\CayDick{\alpha}{C}$ to be $\overline{(a,b)}=(\bar{a},-b)$.  
+
+The algebras are equipped with a \emph{trace} $Tr(x)=x+\bar{x}$,
+and \emph{norm} $N(x)=x\bar{x}$.  This norm serves as the quadratic map to establish
+these algebras a composition algebras.  The images of the trace and norm lie in $k$.
+
+The new algebra is associative only if $C$ is commutative, otherwise it is alternative.  
+This means that $\displaystyle k, \CayDick{\alpha}{k},\CayDick{\alpha,\beta}{k}$ are 
+the associative composition algebras.
+
+An algebra is a \emph{division} algebra if the only zero-divisor is $0$ 
+\cite[II.2]{Schafer:nonass}.  A central simple composition algebra with a non-trivial 
+zero-divisor is called a \emph{split} composition algebra.  Finite dimensional split 
+central simple composition algebras are unique up to isomorphism to one of
+\[ k,\quad \CayDick{1}{k}\cong k\oplus k,\quad \CayDick{1,1}{k}\cong M_2(k),
+\quad \CayDick{1,1,1}{k}.\]
+
+\section{Classification theorem}
+
+\begin{thm}\label{thm:Hurwitz}\cite[Theorem 6.2.3]{jac}
+A composition algebra $C$ over a field $k$ with quadratic form $q(x)=x\bar{x}$ is isomorphic
+to one of the following:
+\begin{enumerate}[(i)]
+\item A purely inseparable extension field $E/F$ of characteristic $2$ and exponent $1$ (trivial
+involution) so $q(x)=x^2$.
+\item $k$ with trivial involution, so $q(x)=x^2$,
+\item Quadratic composition algebra: $\CayDick{\alpha}{k}$ for $\alpha\in k$,
+\item Quaternion algebra: $\CayDick{\alpha,\beta}{k}$ for $\alpha,\beta\in k$,
+\item Octonion algebra: $\CayDick{\alpha,\beta,\gamma}{k}$ for $\alpha,\beta,\gamma\in k$.
+\end{enumerate}
+In particular, all composition algebras over $k$, save perhaps those of type $(i)$, are finite 
+dimensional and of dimension $1$, $2$, $4$ or $8$.
+\end{thm}
+
+\begin{thebibliography}{7}
+\bibitem{tyl} T.Y. Lam: \emph{ Introduction to Quadratic Forms over Fields}, AMS, Providence (2004).
+\bibitem{jac} N. Jacobson \emph{Structure theory of Jordan algebras}, The University of Arkansas lecture
+notes in mathematics, vol. 5, Fayetteville, 1981.
+\bibitem{km} K. McCrimmon: \emph{ A Taste of Jordan Algebras}, Springer, New York (2004).
+\bibitem{jcds} J.H. Conway, D.A. Smith: \emph{ On Quaternions and Octonions, Their Geometry, Arithmetic, and Symmetry}, AK Peters, Natick, Mass (2003)
+\bibitem{Schafer:nonass}
+Richard~D. Schafer, \emph{An introduction to nonassociative algebras}, Pure and
+  Applied Mathematics, Vol. 22, Academic Press, New York, 1966. 
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

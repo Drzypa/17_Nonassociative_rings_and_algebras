@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompositionAlgebrasOvermathbbR}
+\pmcreated{2013-03-22 17:18:17}
+\pmmodified{2013-03-22 17:18:17}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{composition algebras over $\mathbb{R}$}
+\pmrecord{7}{39652}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17A75}
+\pmrelated{HurwitzsTheorem}
+\pmrelated{JacobsonsTheoremOnCompositionAlgebras}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{enumerate}
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+\DeclareMathOperator{\tr}{tr }
+\begin{document}
+There are 7 non-isomorphic composition algebras over $\mathbb{R}$, first 4 division algebras and secondly 
+3 split algebras.
+\begin{enumerate}
+\item The real numbers $\mathbb{R}$.
+\item The complex numbers $\mathbb{C}$.
+\item The Hamiltonians (also known as the quaternions) $\mathbb{H}$.
+\item The octonions (also known as the Cayley or Cayley-Dickson algebra) $\mathbb{O}$.
+\item The \emph{exchange} algebra: $\mathbb{R}\oplus\mathbb{R}$.
+\item $2\times 2$ matrices over $\mathbb{R}$: $M_2(\mathbb{R})$.
+\item The cross-product of $2\times 2$-matrices over $\mathbb{R}$: $M_2(\mathbb{R})\circ M_2(\mathbb{R})$.
+\end{enumerate}
+
+The proof can be seen as a consquence of a theorem of Hurwitz and a theorem of Jacobson.
+In reality various authors contributed to the solution including Albert, Dickson and
+Kaplansky.
+
+
+%%%%%
+%%%%%
+\end{document}

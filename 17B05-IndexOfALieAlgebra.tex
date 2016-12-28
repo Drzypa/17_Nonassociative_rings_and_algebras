@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IndexOfALieAlgebra}
+\pmcreated{2013-03-22 15:30:47}
+\pmmodified{2013-03-22 15:30:47}
+\pmowner{benjaminfjones}{879}
+\pmmodifier{benjaminfjones}{879}
+\pmtitle{index of a Lie algebra}
+\pmrecord{6}{37380}
+\pmprivacy{1}
+\pmauthor{benjaminfjones}{879}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B05}
+%\pmkeywords{index}
+%\pmkeywords{Lie algebra}
+\pmdefines{index of a Lie algebra}
+\pmdefines{Frobenius Lie algebra}
+\pmdefines{Kirillov form}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\DeclareMathOperator{\ind}{ind \,}
+\DeclareMathOperator{\rank}{rank \,}
+%\DeclareMathOperator{\dim}{dim}
+\begin{document}
+Let $\mathfrak{q}$ be a Lie algebra over $\mathbb{K}$ and $\mathfrak{q}^*$ its vector space dual. For $\xi \in \mathfrak{q}^*$ let $\mathfrak{q}_{\xi}$ denote the stabilizer of $\xi$ with respect to the co-adjoint representation. 
+
+The \emph{index} of $\mathfrak{q}$ is defined to be
+
+\[ \ind \mathfrak{q} := \min\limits_{\xi \in \mathfrak{g}^*} \dim 
+\mathfrak{q}_{\xi} \]
+
+\section*{Examples}
+
+\begin{enumerate}
+
+\item If $\mathfrak{q}$ is reductive then $\ind \mathfrak{q} = \rank \mathfrak{q}$. Indeed, $\mathfrak{q}$ and $\mathfrak{q}^*$ are isomorphic as
+representations for $\mathfrak{q}$ and so the index is the minimal dimension among stabilizers of elements in $\mathfrak{q}$. In particular the minimum is realized in the stabilizer of any \emph{regular} element of $\mathfrak{q}$. These elemtents have stabilizer dimension equal to the rank of $\mathfrak{q}$.
+
+\item If $\ind \mathfrak{q} = 0$ then $\mathfrak{q}$ is called a 
+\emph{Frobenius Lie algebra}. This is equivalent to condition that
+the \emph{Kirillov form} $K_{\xi} \colon \mathfrak{q} \times \mathfrak{q} \to 
+\mathbb{K}$ given by $(X,Y) \mapsto \xi([X,Y])$ is non-singular for some $\xi \in \mathfrak{q}^*$. Another equivalent condition when $\mathfrak{q}$ is the Lie algebra of an algebraic group $Q$ is that $\mathfrak{q}$ is Frobenius if and only if $Q$ has an open orbit on $\mathfrak{q}^*$.
+
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

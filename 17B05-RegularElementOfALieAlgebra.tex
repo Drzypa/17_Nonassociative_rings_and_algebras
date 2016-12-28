@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegularElementOfALieAlgebra}
+\pmcreated{2013-03-22 15:30:53}
+\pmmodified{2013-03-22 15:30:53}
+\pmowner{benjaminfjones}{879}
+\pmmodifier{benjaminfjones}{879}
+\pmtitle{regular element of a Lie algebra}
+\pmrecord{6}{37382}
+\pmprivacy{1}
+\pmauthor{benjaminfjones}{879}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B05}
+%\pmkeywords{regular}
+%\pmkeywords{Lie algebra}
+\pmdefines{regular element}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\diag}{diag}
+\begin{document}
+An element $X \in \mathfrak{g}$ of a Lie algebra is called \emph{regular} if the dimension of its centralizer $\zeta_{\mathfrak{g}}(X) = \{ Y \in \mathfrak{g} \mid 
+[X, Y] = 0 \}$ is minimal among all centralizers of elements in $\mathfrak{g}$.
+
+Regular elements clearly exist and moreover they are Zariski dense in $\mathfrak{g}$. The function $X \mapsto \dim \zeta_{\mathfrak{g}}(X)$ is an upper semi-continuous function $\mathfrak{g} \to \mathbb{Z}_{\ge 0}$. Indeed, it is a constant minus $\rank(ad_X)$ and $X \mapsto \rank(ad_X)$ is lower semi-continuous. Thus the set of elements whose centralizer dimension is (greater than or) equal to that of any given regular element is Zariski open and non-empty.
+
+If $\mathfrak{g}$ is reductive then the minimal centralizer dimension is equal to the rank of $\mathfrak{g}$. 
+
+More generally if $V$ is a representation for a Lie algebra $\mathfrak{g}$,
+an element $v \in V$ is called \emph{regular} if the dimension of its stabilizer  is minimal among all stabilizers of elements in $V$.  
+
+
+\section*{Examples}
+
+\begin{enumerate}
+\item In $\mathfrak{sl}_n \mathbb{C}$ a diagonal matrix $X = \diag(s_1, \ldots, s_n)$ is regular iff $(s_i - s_j) \ne 0$ for all pairs $1 \le i < j \le n$. Any conjugate of such a matrix is also obviously regular.
+
+\item In $\mathfrak{sl}_n \mathbb{C}$ the nilpotent matrix
+\[ \left( \begin{array}{ccccc} 
+0 & 1 & \cdots &  & 0 \\
+0 & 0 & 1 & &  \\
+\vdots & & \ddots & \ddots & 1 \\
+0 & & \cdots & & 0 
+\end{array} \right) 
+\]
+is regular. Moreover, it's adjoint orbit contains the set of all regular nilpotent elements. The centralizer of this matrix is the full subalgebra of
+trace zero, diagonal matricies. 
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

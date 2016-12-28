@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocalNaganoTheorem}
+\pmcreated{2013-03-22 14:48:27}
+\pmmodified{2013-03-22 14:48:27}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{local Nagano theorem}
+\pmrecord{6}{36464}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B99}
+\pmclassification{msc}{53B25}
+\pmsynonym{Nagano's theorem}{LocalNaganoTheorem}
+\pmdefines{local Nagano leaf}
+\pmdefines{Nagano leaf}
+\pmdefines{global Nagano leaf}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{thm}[Local Nagano Theorem]
+Let $\Omega \subset {\mathbb{R}}^n$ be an open neighbourhood of a point
+$x^0$.  Further let $\mathfrak{g}$ be a Lie subalgebra of the Lie algebra of
+real analytic real vector fields on $\Omega$ which is also a
+$C^\omega(\Omega;{\mathbb{R}})$-module.  Then there exists a real analytic
+submanifold $M \subset \Omega$ with $x^0 \in M$, such that for all $x \in M$
+we have
+\begin{equation*}
+T_x(M) = \mathfrak{g}(x) .
+\end{equation*}
+Furthermore the germ of $M$ at $x$ is the unique germ of a submanifold with
+this property.
+\end{thm}
+
+Here note that $T_x(M)$ is the tangent space of $M$ at $x$,
+$C^\omega(\Omega;{\mathbb{R}})$ are the real analytic real valued functions
+on $\Omega$.  Also real analytic real vector fields on $\Omega$ are the
+real analytic sections of $T(\Omega)$, the real tangent bundle of $\Omega$.
+
+\begin{defn}
+The germ of the manifold $M$ is called the {\em local Nagano leaf} of 
+$\mathfrak{g}$ at $x_0$.
+\end{defn}
+
+\begin{defn}
+The union of all connected real analytic embedded submanifolds of $\Omega$ whose
+germ at $x_0$ coincides with the germ of $M$ at $x_0$ is called the
+{\em global Nagano leaf}. 
+\end{defn}
+
+The global Nagano leaf turns out to be a connected immersed real analytic submanifold which may however not be an embedded submanifold of $\Omega$.
+
+\begin{thebibliography}{9}
+\bibitem{ber:submanifold}
+M.\@ Salah Baouendi,
+Peter Ebenfelt,
+Linda Preiss Rothschild.
+{\em \PMlinkescapetext{Real Submanifolds in Complex Space and Their Mappings}},
+Princeton University Press,
+Princeton, New Jersey, 1999.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

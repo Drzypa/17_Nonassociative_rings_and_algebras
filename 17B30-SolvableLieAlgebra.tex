@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SolvableLieAlgebra}
+\pmcreated{2013-03-22 12:41:06}
+\pmmodified{2013-03-22 12:41:06}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{solvable Lie algebra}
+\pmrecord{4}{32964}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B30}
+\pmdefines{nilpotent Lie algebra}
+\pmdefines{solvable}
+\pmdefines{nilpotent}
+\pmdefines{lower central series}
+\pmdefines{upper central series}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\h}{\mathfrak{h}}
+\begin{document}
+Let $\g$ be a Lie algebra. The {\em lower central series} of $\g$ is the filtration of subalgebras
+$$
+\D_1 \g \supset \D_2 \g \supset \D_3 \g \supset \cdots \supset \D_k \g \supset \cdots
+$$
+of $\g$, inductively defined for every natural number $k$ as follows:
+\begin{eqnarray*}
+\D_1 \g & := & [\g,\g] \\
+\D_k \g & := & [\g, \D_{k-1} \g]
+\end{eqnarray*}
+
+The {\em upper central series} of $\g$ is the filtration
+$$
+\D^1 \g \supset \D^2 \g \supset \D^3 \g \supset \cdots \supset \D^k \g \supset \cdots
+$$
+defined inductively by
+\begin{eqnarray*}
+\D^1 \g & := & [\g,\g] \\
+\D^k \g & := & [\D^{k-1} \g, \D^{k-1} \g]
+\end{eqnarray*}
+
+In fact both $\D^k \g$ and $\D_k \g$ are ideals of $\g$, and $\D^k \g \subset \D_k \g$ for all $k$. The Lie algebra $\g$ is defined to be {\em nilpotent} if $\D_k \g = 0$ for some $k \in \mathbb{N}$, and {\em solvable} if $\D^k \g = 0$ for some $k \in \mathbb{N}$.
+
+A subalgebra $\h$ of $\g$ is said to be {\em nilpotent} or {\em solvable} if $\h$ is nilpotent or solvable when considered as a Lie algebra in its own right. The terms may also be applied to ideals of $\g$, since every ideal of $\g$ is also a subalgebra.
+%%%%%
+%%%%%
+\end{document}

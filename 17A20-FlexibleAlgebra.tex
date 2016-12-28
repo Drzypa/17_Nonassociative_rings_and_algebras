@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FlexibleAlgebra}
+\pmcreated{2013-03-22 14:43:30}
+\pmmodified{2013-03-22 14:43:30}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{flexible algebra}
+\pmrecord{11}{36351}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17A20}
+\pmrelated{Associator}
+\pmrelated{AlternativeAlgebra}
+\pmdefines{left power}
+\pmdefines{right power}
+\pmdefines{flexible}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A non-associative algebra $A$ is \emph{flexible} if $[\ a,b,a\ ]=0$ for all $a,b\in A$, where $[\ , , ]$ is the associator on $A$.  In other words, we have $(ab)a=a(ba)$ for all $a,b\in A$.  Any associative algebra is clearly flexible.  Furthermore, any alternative algebra with characteristic $\neq 2$ is flexible.
+
+Given an element $a$ in a flexible algebra $A$, define the \emph{left power} of $a$ iteratively as follows:
+\begin{enumerate}
+\item $L^1(a)=a$,
+\item $L^n(a)=a\cdot L^{n-1}(a)$.
+\end{enumerate}
+Similarly, we can define the \emph{right power} of $a$ as:
+\begin{enumerate}
+\item $R^1(a)=a$,
+\item $R^n(a)=R^{n-1}(a)\cdot a$.
+\end{enumerate}
+Then, we can show that $L^{n}(a)=R^{n}(a)$ for all positive integers $n$.  As a result, in a flexible algebra, one can define the (multiplicative) power of an element $a$ as $a^n$ unambiguously.
+%%%%%
+%%%%%
+\end{document}

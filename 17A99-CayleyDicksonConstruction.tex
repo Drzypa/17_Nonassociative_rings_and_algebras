@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CayleyDicksonConstruction}
+\pmcreated{2013-03-22 14:54:11}
+\pmmodified{2013-03-22 14:54:11}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Cayley-Dickson construction}
+\pmrecord{25}{36586}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17A99}
+\pmsynonym{Cayley-Dickson process}{CayleyDicksonConstruction}
+\pmsynonym{doubling process}{CayleyDicksonConstruction}
+\pmsynonym{octonion algebra}{CayleyDicksonConstruction}
+\pmrelated{TheoremsOnSumsOfSquares}
+\pmdefines{Cayley-Dickson algebra}
+\pmdefines{sedenion}
+\pmdefines{quaternion algebra}
+\pmdefines{Cayley algebra}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{algebra}
+
+In the foregoing discussion, an algebra shall mean a non-associative algebra.
+
+Let $A$ be a normed $*$-algebra, an algebra admitting an \PMlinkname{involution}{Involution2} $*$, over a commutative ring $R$ with $1\neq0$.  The Cayley-Dickson construction is a way of enlarging $A$ to a new algebra, $KD(A)$, extending the $*$ as well as the norm operations in $A$, such that $A$ is a subalgebra of $KD(A)$.  
+
+Define $KD(A)$ to be the module (external) direct sum of $A$ with itself: $$KD(A):=A\oplus A.$$  Therefore, addition in $KD(A)$ is defined by addition componentwise in each copy of $A$.  Next, let $\lambda$ be a unit in $R$ and define three additional operations: 
+\begin{enumerate} 
+\item (Multiplication) $(a\oplus b)(c\oplus d):=(ac+\lambda d^*b)\oplus(da+bc^*)$, where $*$ is the involution on $A$, 
+\item (Extended involution) $(a\oplus b)^*:=a^*\oplus(-b)$, and 
+\item (Extended Norm) $N(a\oplus b):=(a\oplus b)(a\oplus b)^*$.
+\end{enumerate} 
+One readily checks that the multiplication is bilinear, since the involution $*$ (on $A$) is linear.  Therefore, $KD(A)$ is an algebra.  
+
+Furthermore, since the extended involution $*$ is clearly bijective and linear, and that $${(a\oplus b)}^{**}=(a^*\oplus(-b))^*=a^{**}\oplus b=a\oplus b,$$ this extended involution is well-defined and so $KD(A)$ is in addition a $*$-algebra.  
+
+Finally, to see that $KD(A)$ is a normed $*$-algebra, we identify $A$ as the first component of $KD(A)$, then $A$ becomes a subalgebra of $KD(A)$ and elements of the form $a\oplus0$ can now be written simply as $a$.  Now, the extended norm $$N(a\oplus b)=(a\oplus b)(a^*\oplus(-b))=(aa^*-\lambda b^*b)\oplus0=N(a)-\lambda N(b)\in A,$$ where $N$ in the subsequent terms of the above equation array is the norm on $A$ given by $N(a)=aa^*$.  The fact that the $N\colon KD(A)\to A$, together with the equality $N(0\oplus0)=0$ show that the extended norm $N$ on $KD(A)$ is well-defined.  Thus, $KD(A)$ is a normed $*$-algebra. 
+
+The normed $*$-algebra $KD(A)$, together with the invertible element $\lambda\in R$, is called the \emph{Cayley-Dickson algebra}, $KD(A,\lambda)$, \emph{obtained from $A$}.
+
+If $A$ has a unity 1, then so does $KD(A,\lambda)$ and its unity is $1\oplus0$.  Furthermore, write $i=0\oplus1$, we check that, $ia=(0\oplus1)(a\oplus0)=0\oplus a^*=(a^*\oplus0)(0\oplus1)=a^*i$.  Therefore, $iA=Ai$ and we can identify the second component of $KD(A,\lambda)$ with $Ai$ and write elements of $Ai$ as $ai$ for $a\in A$.
+
+It is not hard to see that $A(Ai)=(Ai)A\subseteq Ai$ and $(Ai)(Ai)\subseteq A$.  We are now able to write $$KD(A,\lambda)=A\oplus Ai,$$ where each element $x\in KD(A,\lambda)$ has a unique expression $x=a+bi$.
+
+\textbf{Properties}.  Let $x,y,z$ will be general elements of $KD(A,\lambda)$.
+\begin{enumerate}
+\item $(xy)^*=y^*x^*$,
+\item $x+x^*\in A$,
+\item $N(xy)=N(x)N(y)$.
+\end{enumerate}
+
+\textbf{Examples}.  All examples considered below have ground ring the reals $\mathbb{R}$.
+\begin{itemize}
+\item $KD(\mathbb{R},-1)=\mathbb{C}$, the complex numbers.
+\item $KD(\mathbb{C},-1)=\mathbb{H}$, the quaternions.
+\item $KD(\mathbb{H},-1)=\mathbb{O}$, the octonions.
+\item $KD(\mathbb{O},-1)=\mathbb{S}$, which are called the \emph{sedenions}, an algebra of dimension 16 over $\mathbb{R}$.
+\end{itemize}
+
+\textbf{Remarks}.  
+\begin{enumerate}
+\item
+Starting from $\mathbb{R}$, notice each stage of Cayley-Dickson construction produces a new algebra that loses some intrinsic properties of the previous one: $\mathbb{C}$ is no longer orderable (or formally real); commutativity is lost in $\mathbb{H}$; associativity is gone from $\mathbb{O}$; and finally, $\mathbb{S}$ is not even a division algebra anymore!
+\item
+More generally, given any field $k$, any algebra obtained by applying the Cayley-Dickson construction twice to $k$ is called a \emph{quaternion algebra} over $k$, of which $\mathbb{H}$ is an example.  In other words, a quaternion algebra has the form $$KD(KD(k,\lambda_1),\lambda_2),$$ where each $\lambda_i \in k^*:=k-\lbrace 0 \rbrace$.  Any algebra obtained by applying the Cayley-Dickson construction three times to $k$ is called a \emph{Cayley algebra}, of which $\mathbb{O}$ is an example.  In other words, a Cayley algebra has the form $$KD(KD(KD(k,\lambda_1),\lambda_2),\lambda_3),$$ where each $\lambda_i\in k^*$.  A Cayley algebra is an \emph{octonion algebra} when $\lambda_1=\lambda_2=\lambda_3=-1$.
+\end{enumerate}
+
+\begin{thebibliography}{6}
+\bibitem{rs} Richard D. Schafer, {\em An Introduction to Nonassociative Algebras}, Dover Publications, (1995).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

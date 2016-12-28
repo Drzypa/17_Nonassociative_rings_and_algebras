@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PoincareBirkhoffWittTheorem}
+\pmcreated{2013-03-22 13:03:38}
+\pmmodified{2013-03-22 13:03:38}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Poincar\'e-Birkhoff-Witt theorem}
+\pmrecord{7}{33467}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B35}
+\pmsynonym{PBW-theorem}{PoincareBirkhoffWittTheorem}
+%\pmkeywords{PBW}
+%\pmkeywords{ordered monomials}
+\pmrelated{LieAlgebra}
+\pmrelated{UniversalEnvelopingAlgebra}
+\pmrelated{FreeLieAlgebra}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\NN}{\mathbb{N}}
+\begin{document}
+Let $\mathfrak{g}$ be a Lie algebra over a field $k$, and let
+$B$ be a $k$-basis of $\mathfrak{g}$ equipped with a linear
+order $\leq$. The {\em Poincar\'e-Birkhoff-Witt-theorem} (often
+abbreviated to {\em PBW-theorem}) states that the monomials
+\[ x_1 x_2 \cdots x_n \text{ with } x_1 \leq x_2 \leq \cdots \leq x_n \text{
+elements of } B \]
+constitute a $k$-basis of the universal enveloping algebra
+$U(\mathfrak{g})$ of $\mathfrak{g}$. Such monomials are often called
+{\em ordered monomials}  or {\em PBW-monomials}.
+
+It is easy to see that they span $U(\mathfrak{g})$: for all $n \in
+\NN$, let $M_n$ denote the set
+\[ M_n=\{(x_1,\ldots,x_n)\mid x_1 \leq \cdots \leq x_n\} \subset B^n, \]
+and denote by $\pi:\bigcup_{n=0}^\infty B^n \rightarrow U(\mathfrak{g})$ the
+multiplication map. Clearly it suffices to prove that
+\[ \pi(B^n) \subseteq \sum_{i=0}^n \pi(M_i) \]
+for all $n \in \NN$; to this end, we proceed by induction.  For $n=0$
+the statement is clear. Assume that it holds for $n-1\geq 0$, and consider a
+list $(x_1,\ldots,x_n) \in B^n$. If it is an element of $M_n$, then we are
+done. Otherwise, there exists an index $i$ such that $x_i>x_{i+1}$.
+Now we have
+\begin{align*}
+\pi(x_1,\ldots,x_n)&=\pi(x_1,\ldots,x_{i-1},x_{i+1},x_i,x_{i+2},\ldots,x_n)\\
+&+x_1\cdots x_{i-1}[x_i,x_{i+1}]x_{i+1}\cdots x_n.
+\end{align*}
+As $B$ is a basis of $\mathfrak{k}$, $[x_i,x_{i+1}]$ is a linear
+combination of $B$. Using this to expand the second term above, we find
+that it is in $\sum_{i=0}^{n-1} \pi(M_i)$ by the induction hypothesis.
+The argument of $\pi$ in the first term, on the other hand, is
+lexicographically smaller than $(x_1,\ldots,x_n)$, but contains the
+same entries. Clearly this rewriting proces must end, and this
+concludes the induction step.
+
+The proof of linear independence of the PBW-monomials is slightly more
+difficult, but can be found in most introductory texts on Lie algebras, such as the classic below.
+
+\begin{thebibliography}{9}
+\bibitem{jacobson}
+N.\@ Jacobson. \emph{\PMlinkescapetext{Lie Algebras}}. Dover Publications, New York, 1979
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

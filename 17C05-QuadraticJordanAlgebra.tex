@@ -1,0 +1,191 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuadraticJordanAlgebra}
+\pmcreated{2013-03-22 16:27:58}
+\pmmodified{2013-03-22 16:27:58}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{quadratic Jordan algebra}
+\pmrecord{6}{38626}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17C05}
+\pmrelated{QuadraticMap2}
+\pmdefines{quadratic Jordan algebra}
+\pmdefines{inner ideal}
+\pmdefines{outer ideal}
+\pmdefines{quadratic ideal}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+\DeclareMathOperator{\End}{End}
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+\begin{defn}
+Fix a commutative ring $R$ and an $R$-modules $J$ and a quadratic map
+$U:J\rightarrow \End_R J$.  Then the triple $\langle J,U\rangle$ is a
+\emph{quadratic Jordan algebra} if (denoting the evaluation of $U$ by $U_x$
+for $x\in J$)
+\begin{enumerate}
+\item $U_{U_a b}=U_a U_b U_a$ for all $a,b\in J$.
+\item The induced bilinear map $U_{a,b}:=U_{a+b}-U_a-U_b$ gives rise to
+an endomorphism $V_{a,b}$ on $J$ defined by $V_{a,b} x=U_{a,x}b$ which satisfies
+    \[U_a V_{b,a}=V_{a,b} U_a.\]
+\item If $R\subseteq K$ is a commutative ring extension of $R$ then the extension
+$J_K:=K\otimes_R J$ with the extension $U_K:=1_K\otimes U$, satisfies the first two axioms.
+\end{enumerate}
+For a unital quadratic Jordan algebra we include the added assumption
+that there exist some $1\in J$ such that
+$U_1$ is the identity endomorphism of $J$.
+\end{defn}
+
+The concept of a quadratic Jordan algebra was developed by McCrimmon to introduce uniform methods in the study of Jordan algebras over characteristic 2. 
+In a strict sense they are not algebras as they do not have a bilinear product;
+however, their connection to Jordan algebras motivates this terminology.
+
+A common construction for Jordan algebras, so called special Jordan algebra, is by means of using a submodule of an associative algebra $A$ and defining the
+product as
+ \[a.b=\frac{1}{2}(ab+ba).\]
+The $1/2$ is optional (and avoided in the analogous Lie bracket definitions $[a,b]=ab-ba$), in characteristic 2 we can opt to remove it.  The result
+is the usual special Jordan product is also the usual Lie bracket, $a.b=ab+ba=ab-ba=[a,b]$.  So we can treat these algebras as Jordan or Lie algebras.  
+
+However, the axioms of an abstract Jordan algebra are insufficient
+to conclude that every Jordan algebra is special (indeed exceptional Jordan
+algebras called Albert algebras of dimension 27 exist and are not special
+Jordan algebras.)  So general Jordan algebra over characteristic 2 may have different structure than a Lie algebra of characteristic 2.  To make these
+algebras manageable, McCrimmon appealed to the quadratic definition given above.
+
+\begin{prop}
+If $1/2\in K$ then a Jordan algebra over $K$ is a quadratic Jordan algebra 
+where the quadratic map is given by $U_a=\{axa\}$ where $\{xyz\}$ is the Jordan triple product.
+\end{prop}
+
+A bonus to this definition is that it highlights the fundamental tools in the study of Jordan algebras.  For example, instead of using ideals of the Jordan product it is common to use \emph{quadratic ideals}, for instance, in the definition of the solvable radical of a Jordan algebra.
+
+\begin{defn}
+A submodule $I$ of a quadratic Jordan algebra $J$ is an \emph{inner quadratic
+ideal}, or simply an \emph{inner ideal} if $U_I(J)\leq I$, that is $U_i(x)\in I$
+for all $i\in I$, $x\in J$.
+
+A submodule $I$ of a quadratic Jordan algebra $J$ is an \emph{outer quadratic
+ideal}, or a \emph{outer ideal} if $U_J(I)\leq I$, that is, $U_x(i)\in I$
+for all $i\in I$, $x\in J$.
+\end{defn}
+
+If the quadratic Jordan algebra is derived from a Jordan algebra then
+$U_i(x)=\{ixi\}$  So we are asking for $\{iJi\}\leq I$, and in a special
+Jordan algebra we can further express this as $iJi\leq I$.
+
+\begin{thebibliography}{8}
+\bibitem{Jac}
+Jacobson, Nathan \emph{Structure Theory of Jordan Algebras}, The University of
+Arkansas Lecture Notes in Mathematics, vol. 5, Fayetteville, 1981.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

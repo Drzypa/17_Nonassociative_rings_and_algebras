@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{JordanAlgebra}
+\pmcreated{2013-03-22 14:52:15}
+\pmmodified{2013-03-22 14:52:15}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Jordan algebra}
+\pmrecord{10}{36547}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17C05}
+\pmsynonym{Jordan homomorphism}{JordanAlgebra}
+\pmsynonym{Jordan isomorphism}{JordanAlgebra}
+\pmdefines{Jordan identity}
+\pmdefines{special Jordan algebra}
+\pmdefines{exceptional Jordan algebra}
+\pmdefines{Jordan algebra homomorphism}
+\pmdefines{Jordan subalgebra}
+\pmdefines{Jordan algebra isomorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{identity}
+\PMlinkescapeword{side}
+
+Let $R$ be a commutative ring with $1\neq 0$.  An $R$-algebra $A$ with multiplication not assumed to be associative is called a (commutative) \emph{Jordan algebra} if
+\begin{enumerate}
+\item $A$ is commutative: $ab=ba$, and
+\item $A$ satisfies the \emph{Jordan identity}: $(a^2b)a=a^2(ba)$,
+\end{enumerate}
+for any $a,b\in A$.
+
+The above can be restated as 
+\begin{enumerate}
+\item $[A,A]=0$, where $[\ , ]$ is the commutator bracket, and 
+\item for any $a\in A$, $[a^2,A,a]=0$, where $[\ , , ]$ is the associator bracket.
+\end{enumerate}
+If $A$ is a Jordan algebra, a subset $B\subseteq A$ is called a \emph{Jordan subalgebra} if $BB\subseteq B$.  Let $A$ and $B$ be two Jordan algebras.  A \emph{Jordan algebra homomorphism}, or simply \emph{Jordan homomorphism}, from $A$ to $B$ is an algebra homomorphism that respects the above two laws.  A \emph{Jordan algebra isomorphism} is just a bijective Jordan algebra homomorphism.
+
+\textbf{Remarks}.
+\begin{itemize}
+\item If $A$ is a Jordan algebra such that $\operatorname{char}(A)\neq2$, then $A$ is \PMlinkname{power-associative}{PowerAssociativeAlgebra}.
+\item If in addition $2=1+1\neq\operatorname{char}(A)$, then by replacing $a$ with $a+1$ in the Jordan identity and simplifying, $A$ is \PMlinkname{flexible}{FlexibleAlgebra}.
+\item Given any associative algebra $A$, we can define a Jordan algebra $A^{+}$.  To see this, let $A$ be an associative algebra with associative multiplication $\cdot$ and suppose $2=1+1$ is invertible in $R$.  Define a new multiplication given by 
+\begin{equation}
+ab=\frac{1}{2}(a\cdot b+b\cdot a).
+\end{equation}
+It is readily checked that this new multiplication satisifies both the commutative law and the Jordan identity.  Thus $A$ with the new multiplication is a Jordan algebra and we denote it by $A^{+}$.  However, unlike Lie algebras, not every Jordan algebra is embeddable in an associative algebra.  Any Jordan algebra that is isomorphic to a Jordan subalgebra of $A^{+}$ for some associative algebra $A$ is called a \emph{special Jordan algebra}.  Otherwise, it is called an \emph{exceptional Jordan algebra}.  As a side note, the right hand side of Equation (1) is called the \emph{Jordan product}.
+\item An example of an exceptional Jordan algebra is $H_3(\mathbb{O})$, the algebra of $3\times3$ Hermitian matrices over the octonions.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

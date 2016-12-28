@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Anticommutative}
+\pmcreated{2014-02-04 7:50:58}
+\pmmodified{2014-02-04 7:50:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{anticommutative}
+\pmrecord{8}{42241}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17A01}
+\pmsynonym{anticommutative operation}{Anticommutative}
+\pmsynonym{anticommutativity}{Anticommutative}
+\pmrelated{Supercommutative}
+\pmrelated{AlternativeAlgebra}
+\pmrelated{Subcommutative}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+A binary operation ``$\star$'' is said to be \emph{anticommutative} if it satisfies the identity
+\begin{align}
+y\!\star\!x \;=\; -(x\!\star\!y),
+\end{align}
+where the minus denotes the \PMlinkescapetext{opposite} element in the algebra in question.\, This implies that\, 
+$x\!\star\!x \;=\; -(x\!\star\!x)$,\, i.e. $x\!\star\!x$ must be the neutral element of the addition of the algebra:
+\begin{align}
+x\!\star\!x \;=\; \textbf{0}.
+\end{align}
+Using the distributivity of ``$\star$'' over ``$+$'' we see that the indentity (2) also implies (1):
+$$\textbf{0} \;=\; (x\!+\!y)\!\star\!(x\!+\!y) \;=\; x\!\star\!x+x\!\star\!y+y\!\star\!x+y\!\star\!y
+\;=\; x\!\star\!y+y\!\star\!x$$\\
+
+A well known example of anticommutative operations is the vector product in the algebra 
+\,$(\mathbb{R}^3,\,+,\,\times)$,\, satisfying
+$$\vec{b}\!\times\!\vec{a} \;=\; -(\vec{a}\!\times\!\vec{b}),
+\qquad \vec{a}\!\times\!\vec{a} \;=\; \vec{0}.$$
+Also we know that the subtraction of numbers obeys \PMlinkescapetext{similar} identities
+$$b\!-\!a \;=\; -(a\!-\!b), \qquad a\!-\!a \;=\; 0.$$\\
+An important anticommutative operation is the Lie bracket.
+
+
+
+%%%%%
+%%%%%
+\end{document}

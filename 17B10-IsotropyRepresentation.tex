@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IsotropyRepresentation}
+\pmcreated{2013-03-22 12:42:28}
+\pmmodified{2013-03-22 12:42:28}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{isotropy representation}
+\pmrecord{6}{32992}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B10}
+\pmrelated{AdjointRepresentation}
+
+\newcommand{\lag}{\mathfrak{g}}
+\newcommand{\lah}{\mathfrak{h}}
+\newcommand{\ad}{\mathop{\mathrm{ad}}\nolimits}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{\PMlinkescapetext{{#1}}}
+\newcommand{\pln}[2]{\PMlinkname{#1}{#2}}
+\begin{document}
+Let $\lag$ be a Lie algebra, and $\lah\subset\lag$ a subalgebra.  The
+isotropy representation of $\lah$ relative to $\lag$ is the naturally
+defined action of $\lah$ on the quotient vector space $\lag/\lah$.
+
+Here is a synopsis of the technical details. As is customary, we will
+use  
+$$b+\lah,\, b\in\lag$$
+to denote the coset elements of $\lag/\lah$.
+Let $a\in\lah$ be given.  Since $\lah$ is invariant with respect to
+$\ad_\lag(a)$, the adjoint action factors through the quotient to
+give a well defined endomorphism of $\lag/\lah$. The action is given
+by
+$$b+\lah \mapsto [a,b]+\lah,\quad b\in\lag.$$
+This is the action
+alluded to in the first paragraph.
+%%%%%
+%%%%%
+\end{document}

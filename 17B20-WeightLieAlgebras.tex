@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeightLieAlgebras}
+\pmcreated{2013-03-22 13:11:42}
+\pmmodified{2013-03-22 13:11:42}
+\pmowner{GrafZahl}{9234}
+\pmmodifier{GrafZahl}{9234}
+\pmtitle{weight (Lie algebras)}
+\pmrecord{7}{33654}
+\pmprivacy{1}
+\pmauthor{GrafZahl}{9234}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B20}
+\pmsynonym{weight}{WeightLieAlgebras}
+%\pmkeywords{representation}
+%\pmkeywords{Cartan}
+%\pmkeywords{Lie}
+%\pmkeywords{abelian}
+\pmdefines{diagonalisable}
+\pmdefines{diagonalizable}
+\pmdefines{multiplicity}
+\pmdefines{weight space}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[latin1]{inputenc}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Bigcup}{\bigcup\limits}
+\newcommand{\DirectSum}{\bigoplus\limits}
+\newcommand{\Prod}{\prod\limits}
+\newcommand{\Sum}{\sum\limits}
+\newcommand{\mbb}{\mathbb}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mmm}[9]{\left(\begin{array}{rrr}#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{array}\right)}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+
+% Math Operators/functions
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\cwe}{cwe}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\mult}{mult}
+\DeclareMathOperator{\we}{we}
+\DeclareMathOperator{\wt}{wt}
+\begin{document}
+Let $\mf{h}$ be an abelian Lie algebra, $V$ a vector space and
+$\rho\colon\mf{h}\to\End V$ a representation. Then the representation
+is said to be \emph{diagonalisable}, if $V$ can be written as a direct
+sum
+\begin{equation*}
+V=\DirectSum_{\lambda\in\mf{h}^*}V_\lambda
+\end{equation*}
+where $\mf{h}^*$ is the dual space of $\mf{h}$ and
+\begin{equation*}
+V_\lambda=\{v\in V\mid\rho(h)v=\lambda(h)v\text{ for all
+}h\in\mf{h}\}.
+\end{equation*}
+
+Now let $\mf{g}$ be a semi-simple Lie algebra. Fix a Cartan subalgebra
+$\mf{h}$, then $\mf{h}$ is abelian. Let $\rho\colon\mf{g}\to\End
+V$ be a representation whose restriction to $\mf{h}$ is
+diagonalisable. Then for any $\lambda\in\mf{h}^*$, the space
+$V_\lambda$ is the \emph{weight space} of $\lambda$ with respect to
+$\rho$. The \emph{multiplicity} of
+$\lambda$ with respect to $\rho$ is the dimension of $V_\lambda$:
+\begin{equation*}
+\mult_\rho(\lambda):=\dim V_\lambda.
+\end{equation*}
+If the multiplicity of $\lambda$ is greater than zero, then $\lambda$
+is called a \emph{weight} of the representation $\rho$.
+
+A representation of a semi-simple Lie algebra is determined by the
+multiplicities of its weights.
+%%%%%
+%%%%%
+\end{document}

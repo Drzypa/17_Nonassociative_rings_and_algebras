@@ -1,0 +1,276 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PicturesOfDynkinDiagrams}
+\pmcreated{2013-03-22 13:29:15}
+\pmmodified{2013-03-22 13:29:15}
+\pmowner{Dr_Absentius}{537}
+\pmmodifier{Dr_Absentius}{537}
+\pmtitle{pictures of Dynkin diagrams}
+\pmrecord{19}{34060}
+\pmprivacy{1}
+\pmauthor{Dr_Absentius}{537}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B20}
+
+%\documentclass{amsart}
+\usepackage{amsmath}
+%\usepackage[all,poly,knot,dvips]{xy}
+\usepackage{pstricks,pst-poly,pst-node}
+%\usepacage[dvips]{pstcol}
+
+
+\usepackage{amssymb,latexsym}
+\usepackage{color}
+
+\usepackage{amsthm}
+\usepackage{eucal}
+
+% THEOREM Environments --------------------------------------------------
+
+\newtheorem{thm}{Theorem}
+ \newtheorem*{mainthm}{Main~Theorem}
+ \newtheorem{cor}[thm]{Corollary}
+ \newtheorem{lem}[thm]{Lemma}
+ \newtheorem{prop}[thm]{Proposition}
+ \newtheorem{claim}[thm]{Claim}
+ \theoremstyle{definition}
+ \newtheorem{defn}[thm]{Definition}
+ \theoremstyle{remark}
+ \newtheorem{rem}[thm]{Remark}
+\newtheorem*{Rem}{Remark}
+ \numberwithin{equation}{subsection}
+
+
+%---------------------  Greek letters, etc ------------------------- 
+
+\newcommand{\CA}{\mathcal{A}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\CM}{\mathcal{M}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\BC}{\mathbb{C}}
+\newcommand{\BN}{\mathbb{N}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\FF}{\mathfrak{F}}
+\newcommand{\FL}{\mathfrak{L}}
+\newcommand{\FM}{\mathfrak{M}}
+\newcommand{\Ga}{\alpha}
+\newcommand{\Gb}{\beta}
+\newcommand{\Gg}{\gamma}
+\newcommand{\GG}{\Gamma}
+\newcommand{\Gd}{\delta}
+\newcommand{\GD}{\Delta}
+\newcommand{\Ge}{\varepsilon}
+\newcommand{\Gz}{\zeta}
+\newcommand{\Gh}{\eta}
+\newcommand{\Gq}{\theta}
+\newcommand{\GQ}{\Theta}
+\newcommand{\Gi}{\iota}
+\newcommand{\Gk}{\kappa}
+\newcommand{\Gl}{\lambda}
+\newcommand{\GL}{\Lamda}
+\newcommand{\Gm}{\mu}
+\newcommand{\Gn}{\nu}
+\newcommand{\Gx}{\xi}
+\newcommand{\GX}{\Xi}
+\newcommand{\Gp}{\pi}
+\newcommand{\GP}{\Pi}
+\newcommand{\Gr}{\rho}
+\newcommand{\Gs}{\sigma}
+\newcommand{\GS}{\Sigma}
+\newcommand{\Gt}{\tau}
+\newcommand{\Gu}{\upsilon}
+\newcommand{\GU}{\Upsilon}
+\newcommand{\Gf}{\varphi}
+\newcommand{\GF}{\Phi}
+\newcommand{\Gc}{\chi}
+\newcommand{\Gy}{\psi}
+\newcommand{\GY}{\Psi}
+\newcommand{\Gw}{\omega}
+\newcommand{\GW}{\Omega}
+\newcommand{\Gee}{\epsilon}
+\newcommand{\Gpp}{\varpi}
+\newcommand{\Grr}{\varrho}
+\newcommand{\Gff}{\phi}
+\newcommand{\Gss}{\varsigma}
+
+\def\co{\colon\thinspace}
+\begin{document}
+Here is a complete list of connected Dynkin diagrams. In general if the name of a
+diagram has $n$ as a subscript then there are $n$ dots in the diagram.
+There are four infinite series that correspond to \emph{classical} complex (that is over $\BC$) simple Lie algebras. No pun intended.
+\begin{itemize}
+\item $\mathrm{A}_n$, for $n\geq 1$ represents the simple complex
+  Lie algebra $\mathfrak{sl}_{n+1}$:
+  \begin{figure*}[h]
+    \centering \colorbox{white}{%
+\begin{pspicture}(-1,.5)(5.5,4.5)
+        \psdots[dotsize=.2,dotstyle=o](0,4)(0,3)(1,3)(0,2)(1,2)(2,2)(0,.6)(1,.6)(2,.6)(3.8,.6)(4.8,.6)
+        \psdots[dotsize=.1](2.7,.6)(2.9,.6)(3.1,.6)(.5,1.1)(.5,1.3)(.5,1.5)
+        \psline(.09,3)(.91,3) \psline(.09,2)(.91,2)
+        \psline(1.09,2)(1.91,2) \psline(.09,.6)(.91,.6)
+        \psline(1.09,.6)(1.91,.6) \psline(2.09,.6)(2.5,.6)
+        \psline(3.3,.6)(3.71,.6) \psline(3.89,.6)(4.71,.6)
+        \rput(-.8,4){$\mathrm{A}_1$} \rput(-.8,3){$\mathrm{A}_2$}
+        \rput(-.8,2){$\mathrm{A}_3$} \rput(-.8,.6){$\mathrm{A}_n$}
+      \end{pspicture}}
+  \end{figure*}
+\item $\mathrm{B}_n$, for $n\geq 1$ represents the simple complex
+  Lie algebra $\mathfrak{so}_{2n+1}$:
+  \begin{figure*}[h]
+    \centering \colorbox{white}{%
+      \begin{pspicture}(-1,.5)(5.5,4.5)
+        \psdots[dotsize=.2,dotstyle=o](0,4)(0,3)(1,3)(0,2)(1,2)(2,2)(0,.6)(1,.6)(2,.6)(3.8,.6)(4.8,.6)
+        \psdots[dotsize=.1](2.7,.6)(2.9,.6)(3.1,.6)(.5,1.1)(.5,1.3)(.5,1.5)
+        \psline(.08,3.06)(.92,3.06) \psline(.08,2.94)(.92,2.94)
+        \psline(.5,3)(.3,3.2) \psline(.5,3)(.3,2.8)
+        \psline(.09,2)(.91,2) \psline(1.08,2.06)(1.92,2.06)
+        \psline(1.08,1.94)(1.92,1.94) \psline(1.5,2)(1.3,2.2)
+        \psline(1.5,2)(1.3,1.8) \psline(.09,.6)(.91,.6)
+        \psline(1.09,.6)(1.91,.6) \psline(2.09,.6)(2.5,.6)
+        \psline(3.3,.6)(3.71,.6)
+        % \psline(3.89,.6)(4.71,.6)
+        \psline(3.89,.66)(4.72,.66) \psline(3.89,.54)(4.72,.54)
+        \psline(4.3,.6)(4.1,.8) \psline(4.3,.6)(4.1,.4)
+        \rput(-.8,4){$\mathrm{B}_1$} \rput(-.8,3){$\mathrm{B}_2$}
+        \rput(-.8,2){$\mathrm{B}_3$} \rput(-.8,.6){$\mathrm{B}_n$}
+      \end{pspicture}}
+  \end{figure*}
+\item $\mathrm{C}_n$, for $n\geq 1$ represents the simple complex
+  Lie algebra $\mathfrak{sp}_{2n}$:
+  \begin{figure*}[h]
+    \centering \colorbox{white}{%
+      \begin{pspicture}(-1,.5)(5.5,4.5)
+        \psdots[dotsize=.2,dotstyle=o](0,4)(0,3)(1,3)(0,2)(1,2)(2,2)(0,.6)(1,.6)(2,.6)(3.8,.6)(4.8,.6)
+        \psdots[dotsize=.1](2.7,.6)(2.9,.6)(3.1,.6)(.5,1.1)(.5,1.3)(.5,1.5)
+        \psline(.08,3.06)(.92,3.06) \psline(.08,2.94)(.92,2.94)
+        \psline(.5,3)(.7,3.2) \psline(.5,3)(.7,2.8)
+        \psline(.09,2)(.91,2) \psline(1.08,2.06)(1.92,2.06)
+        \psline(1.08,1.94)(1.92,1.94) \psline(1.5,2)(1.7,2.2)
+        \psline(1.5,2)(1.7,1.8) \psline(.09,.6)(.91,.6)
+        \psline(1.09,.6)(1.91,.6) \psline(2.09,.6)(2.5,.6)
+        \psline(3.3,.6)(3.71,.6)
+        % \psline(3.89,.6)(4.71,.6)
+        \psline(3.89,.66)(4.72,.66) \psline(3.89,.54)(4.72,.54)
+        \psline(4.3,.6)(4.5,.8) \psline(4.3,.6)(4.5,.4)
+        \rput(-.8,4){$\mathrm{C}_1$} \rput(-.8,3){$\mathrm{C}_2$}
+        \rput(-.8,2){$\mathrm{C}_3$} \rput(-.8,.6){$\mathrm{C}_n$}
+      \end{pspicture}}
+  \end{figure*}
+  \eject \vfill
+\item $\mathrm{D}_n$, for $n\geq 3$ represents the simple complex
+  Lie algebra $\mathfrak{so}_{2n}$:
+  \begin{figure*}[h] \centering \colorbox{white}{%
+      \begin{pspicture}(-1,-3)(7.5,5)
+        \psdots[dotsize=.2,dotstyle=o](0,4)(.7071068,4.7071068)(.7071068,3.292893)
+        (0,2)(1,2)(1.7071068,2.7071068)(1.7071068,1.292893)
+        (0,0)(1,0)(2,0)(2.7071068,.7071068)(2.7071068,-.7071068)
+        (0,-2.2)(1,-2.2)(2,-2.2)(3,-2.2)(5,-2.2)(6,-2.2)(6.7071068,-1.49289)(6.7071068,-2.9071)
+        \psline(.07,4.07)(.6471068,4.6471068)
+        \psline(.07,3.93)(.6551068,3.358893) \psline(.09,2)(.91,2)
+        \psline(1.07,2.07)(1.6471068,2.6471068)
+        \psline(1.07,1.93)(1.6551068,1.358893) \psline(.09,0)(.91,0)
+        \psline(1.09,0)(1.91,0)
+        \psline(2.07,.07)(2.6471068,.6471068)
+        \psline(2.07,-.03)(2.6551068,-.641)
+        \psline(.09,-2.2)(.91,-2.2) \psline(1.09,-2.2)(1.91,-2.2)
+        \psline(2.09,-2.2)(2.91,-2.2) \psline(3.09,-2.2)(3.5,-2.2)
+        \psline(4.5,-2.2)(4.91,-2.2) \psline(5.09,-2.2)(5.91,-2.2)
+        \psline(6.07,-2.13)(6.6471068,-1.552893)
+        \psline(6.07,-2.27)(6.6551068,-2.841107)
+        \psdots(.5,-1.2)(.5,-1.5)(.5,-1.8)
+        (3.8,-2.2)(4,-2.2)(4.2,-2.2) \rput(-.8,4){$\mathrm{D}_3$}
+        \rput(-.8,2){$\mathrm{D}_4$} \rput(-.8,0){$\mathrm{D}_5$}
+        \rput(-.8,-2.2){$\mathrm{D}_n$}
+      \end{pspicture}}
+  \end{figure*}
+\end{itemize}
+And then there are the \emph{exceptional} cases that come in finite
+families. The corresponding Lie algebras are usually called by the
+name of the diagram.
+\begin{itemize}
+\item There is the $\mathrm{E}$ series that has three members:
+  $\mathrm{E}_6$ which represents a $78$--dimensional Lie algebra,
+  $\mathrm{E}_7$ which represents a $133$--dimensional Lie algebra,
+  and $\mathrm{E}_8$ which represents a $248$--dimensional Lie
+  algebra.
+  \begin{figure*}[h]
+    \centering \colorbox{white}{
+      \begin{pspicture}(-1,-.2)(6.5,5.4)
+        \psdots[dotsize=.2,dotstyle=o](0,4)(1,4)(2,4)(3,4)(4,4)(2,5)
+        (0,2)(1,2)(2,2)(3,2)(4,2)(5,2)(2,3)
+        (0,0)(1,0)(2,0)(3,0)(4,0)(5,0)(6,0)(2,1)
+        \psline(.09,4)(.91,4) \psline(1.09,4)(1.91,4)
+        \psline(2.09,4)(2.91,4) \psline(3.09,4)(3.91,4)
+        \psline(2,4.09)(2,4.91) \psline(.09,2)(.91,2)
+        \psline(1.09,2)(1.91,2) \psline(2.09,2)(2.91,2)
+        \psline(3.09,2)(3.91,2) \psline(4.09,2)(4.91,2)
+        \psline(2,2.09)(2,2.91) \psline(.09,0)(.91,0)
+        \psline(1.09,0)(1.91,0) \psline(2.09,0)(2.91,0)
+        \psline(3.09,0)(3.91,0) \psline(4.09,0)(4.91,0)
+        \psline(5.09,0)(5.91,0) \psline(2,.09)(2,.91)
+        \rput(-.8,4){$\mathrm{E}_6$} \rput(-.8,2){$\mathrm{E}_7$}
+        \rput(-.8,0){$\mathrm{E}_8$}
+      \end{pspicture}}
+  \end{figure*}
+  \eject \vfill
+\item There is the $\mathrm{F}_4$ diagram which represents a
+  $52$--dimensional complex simple Lie algebra:
+  \begin{figure*}[h]
+    \centering \colorbox{white}{
+      \begin{pspicture}(-2,2)(4,4.5)
+        \psdots[dotsize=.2,dotstyle=o](-1,3)(0,3)(1,3)(2,3)
+        \psline(1.09,3)(1.91,3) \psline(-.09,3)(-.91,3)
+        \psline(.08,3.06)(.92,3.06) \psline(.08,2.94)(.92,2.94)
+        \psline(.5,3)(.3,3.2) \psline(.5,3)(.3,2.8)
+        \rput(-1.8,3){$\mathrm{F}_4$}
+      \end{pspicture}}
+  \end{figure*}
+\item And finally there is $\mathrm{G}_2$ that represents a
+  $14$--dimensional Lie algebra.
+  \begin{figure*}[h] \centering \colorbox{white}{
+      \begin{pspicture}(-1,3.8)(4,1.5)
+        \psdots[dotsize=.2,dotstyle=o](0,3)(1,3)
+        \psline(.09,3)(.91,3) \psline(.08,3.06)(.92,3.06)
+        \psline(.08,2.94)(.92,2.94) \psline(.5,3)(.3,3.2)
+        \psline(.5,3)(.3,2.8) \rput(-.8,3){$\mathrm{G}_2$}
+      \end{pspicture}}
+  \end{figure*}
+\end{itemize}
+
+Notice the low dimensional coincidences:
+$$\mathrm{A}_1=\mathrm{B}_1=\mathrm{C}_1$$
+which reflects the exceptional isomorphisms
+$$\mathfrak{sl}_2\cong\mathfrak{so}_3\cong\mathfrak{sp}_2\,.$$
+Also
+$$\mathrm{B}_2\cong\mathrm{C}_2$$
+reflecting the isomorphism
+$$\mathfrak{so}_5\cong\mathfrak{sp}_4\,.$$
+And,
+$$\mathrm{A}_3\cong\mathrm{D}_3$$
+reflecting
+$$\mathfrak{sl}_4\cong\mathfrak{so}_6\,.$$
+\begin{Rem}
+  Often in the literature the listing of Dynkin diagrams is arranged
+  so that there are no ``intersections'' between different
+  families. However by allowing intersections one gets a graphical
+  representation of the low degree isomorphisms. In the same vein
+  there is a graphical representation of the isomorphism
+$$\mathfrak{so_4} \cong \mathfrak{sl_2}\times \mathfrak{sl_2}\,.$$
+Namely, if not for the requirement that the families consist of
+connected diagrams, one could start the $\mathrm{D}$ family with
+\begin{center}
+  \colorbox{white}{
+    \begin{pspicture}(-1,3)(1,5)
+      \psdots[dotsize=.2,dotstyle=o](.7071068,4.7071068)(.7071068,3.292893)
+      \rput(-.8,4){$\mathrm{D}_2$}
+    \end{pspicture}}
+\end{center}
+which consists of two disjoint copies of $\mathrm{A}_2$.
+\end{Rem}
+
+%%%%%
+%%%%%
+\end{document}

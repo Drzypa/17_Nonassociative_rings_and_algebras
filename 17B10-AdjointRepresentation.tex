@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AdjointRepresentation}
+\pmcreated{2015-10-05 17:38:19}
+\pmmodified{2015-10-05 17:38:19}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{adjoint representation}
+\pmrecord{9}{32965}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B10}
+\pmrelated{IsotropyRepresentation}
+\pmdefines{adjoint action}
+\pmdefines{gl}
+\pmdefines{general linear Lie algebra}
+
+
+\begin{document}
+\newcommand{\lag}{\mathfrak{g}}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\End}{End}
+
+
+Let $\lag$ be a Lie algebra.  For every $a\in\lag$ we define the
+\PMlinkescapetext{{\em  adjoint endomorphism}}, a.k.a. the {\em adjoint action},
+$$\ad(a):\lag\rightarrow\lag$$
+to be the linear transformation with
+action
+$$\ad(a): b\mapsto [a,b],\quad b\in\lag.$$
+
+For any vector space $V$, we use $\mathfrak{gl}(V)$ to denote the Lie algebra 
+of $\End V$ determined by the commutator bracket.  So 
+$\mathfrak{gl}(V)=\End V$ as vector spaces, only the multiplications are different.  
+
+In this notation, treating $\mathfrak{g}$ as a vector space, the linear mapping $\ad:\lag\rightarrow \mathfrak{gl}(\lag)$ with action $$a\mapsto \ad(a),\quad a\in\lag$$
+is called the {\em adjoint representation} of $\lag$.  The fact that
+$\ad$ defines a representation is a straight-forward consequence of
+the Jacobi identity axiom.  Indeed, let $a,b\in \lag$ be given.  We
+wish to show that
+$$\ad([a,b]) = [\ad(a),\ad(b)],$$
+where the bracket on the left is the
+$\lag$ multiplication structure, and the bracket on the right is the
+commutator bracket.  For all $c\in\lag$ the left hand side maps $c$ to
+$$[[a,b],c],$$
+while the right hand side maps $c$ to
+$$[a,[b,c]]+[b,[a,c]].$$
+Taking skew-symmetry of the bracket as a
+given, the equality of these two expressions is logically equivalent
+to the Jacobi identity:
+$$[a,[b,c]] +[b,[c,a]] + [c,[a,b]] = 0.$$
+%%%%%
+%%%%%
+\end{document}

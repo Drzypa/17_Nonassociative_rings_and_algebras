@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuadraticAlgebra}
+\pmcreated{2013-03-22 15:11:38}
+\pmmodified{2013-03-22 15:11:38}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{quadratic algebra}
+\pmrecord{4}{36950}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17A45}
+\pmrelated{QuadraticLieAlgebra}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+A non-associative algebra $A$ (with unity $1_A$) over a commutative
+ring $R$ (with unity $1_R$) is called a \emph{quadratic algebra} if
+$A$ admits a quadratic form $Q\colon A\to R$ such that
+\begin{enumerate}
+\item $Q(1_A)=1_R$,
+\item the quadratic equation $x^2-b(1_A,x)x+Q(x)1_A=0$ is satisfied
+by all $x\in A$, where $b$ is the associated symmetric bilinear form
+given by $b(x,y):=Q(x+y)-Q(x)-Q(y)$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Nucleus}
+\pmcreated{2013-03-22 14:52:19}
+\pmmodified{2013-03-22 14:52:19}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{nucleus}
+\pmrecord{10}{36548}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17A01}
+\pmdefines{center of a nonassociative algebra}
+\pmdefines{nuclear}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{associate}
+
+Let $A$ be an algebra, not necessarily associative multiplicatively.  The \emph{nucleus} of $A$ is:
+$$\mathcal{N}(A):=\lbrace a\in A\mid [a,A,A]=[A,a,A]=[A,A,a]=0 \rbrace,$$
+where $[\ , , ]$ is the associator bracket.  In other words, the nucleus is the set of elements that multiplicatively associate with all elements of $A$.  An element $a\in A$ is \emph{nuclear} if $a\in\mathcal{N}(A)$.
+
+$\mathcal{N}(A)$ is a Jordan subalgebra of $A$.  To see this, let $a,b\in \mathcal{N}(A)$.  Then for any $c,d\in A$,  
+\begin{eqnarray}
+[ab,c,d] &=& ((ab)c)d-(ab)(cd) = (a(bc))d-(ab)(cd) \\
+&=& a((bc)d)-(ab)(cd) = a(b(cd))-(ab)(cd) \\
+&=& a(b(cd))-a(b(cd)) = 0
+\end{eqnarray}
+Similarly, $[c,ab,d]=[c,d,ab]=0$ and so $ab\in\mathcal{N}(A)$.
+
+Accompanying the concept of a nucleus is that of the \emph{center of a nonassociative algebra} $A$ (which is slightly different from the definition of the center of an associative algebra):
+$$\mathcal{Z}(A):=\lbrace a\in \mathcal{N}(A)\mid [a,A]=0 \rbrace,$$
+where $[\ , ]$ is the commutator bracket.
+
+Hence elements in $\mathcal{Z}(A)$ commute \emph{as well as} associate with all elements of $A$.  Like the nucleus, the center of $A$ is also a Jordan subalgebra of $A$.
+%%%%%
+%%%%%
+\end{document}

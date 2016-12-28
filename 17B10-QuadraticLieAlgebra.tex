@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuadraticLieAlgebra}
+\pmcreated{2013-03-22 15:30:44}
+\pmmodified{2013-03-22 15:30:44}
+\pmowner{benjaminfjones}{879}
+\pmmodifier{benjaminfjones}{879}
+\pmtitle{quadratic Lie algebra}
+\pmrecord{6}{37379}
+\pmprivacy{1}
+\pmauthor{benjaminfjones}{879}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B10}
+\pmclassification{msc}{17B01}
+%\pmkeywords{quadratic}
+%\pmkeywords{invariant scalar product}
+%\pmkeywords{Lie algebra}
+\pmrelated{quadraticAlgebra}
+\pmdefines{quadratic Lie algebra}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A Lie algebra $\mathfrak{g}$ is said to be \emph{quadratic} if $\mathfrak{g}$ as a representation (under the adjoint action) admits a non-degenerate, invariant scalar product $( \cdot \mid \cdot )$ .
+
+$\mathfrak{g}$ being quadratic implies that the adjoint and co-adjoint representations of $\mathfrak{g}$ are isomorphic.
+
+Indeed, the non-degeneracy of $( \cdot \mid \cdot )$ implies that the induced map $\phi \colon \mathfrak{g} \to \mathfrak{g}^*$ given by $\phi(X)(Z) = (X \mid Z)$ is an isomorphism of vector spaces. Invariance of the scalar product means that 
+$( [X,Y] \mid Z) = -(Y \mid [X,Z] ) = (Y \mid [Z,X] )$. This implies that $\phi$ is a map of representations: 
+
+\[ \phi(ad_X(Y))(Z) = \phi([X,Y])(Z) = ( [X,Y] \mid Z ) = ( Y \mid [Z,X] ) = ad^*_X( \phi(Y)(Z) ) \]
+%%%%%
+%%%%%
+\end{document}

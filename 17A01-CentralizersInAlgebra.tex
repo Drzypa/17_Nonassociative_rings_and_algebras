@@ -1,0 +1,267 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CentralizersInAlgebra}
+\pmcreated{2013-03-22 17:22:30}
+\pmmodified{2013-03-22 17:22:30}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{centralizers in algebra}
+\pmrecord{14}{39740}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17A01}
+\pmsynonym{centraliser}{CentralizersInAlgebra}
+\pmrelated{CentralizerOfASubsetOfAGroup}
+\pmrelated{LieAlgebra}
+\pmdefines{centralizer}
+\pmdefines{center}
+\pmdefines{central}
+\pmdefines{centraliser}
+\pmdefines{additive commutator}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+\section{Abstract definitions and properties}
+
+\begin{defn}
+Let $S$ be a set with a binary operation $*$.  Let $T$ be a subset of $S$.  Then define 
+the \emph{centralizer} in $S$ of $T$ as the subset
+\begin{equation*}
+   C_S(T)=\{ s\in S : s*t=t*s, \textnormal{ for all } t\in T\}.
+\end{equation*}
+The \emph{center} of $S$ is defined as $C_S(S)$.  This is commonly denoted $Z(S)$ where $Z$ is derived from the German word \emph{zentral}.  Subsets and elements of the center 
+are called \emph{central}.
+\end{defn}
+
+If we regard $*:S\times S\to S$ in the \PMlinkescapetext{language} of actions we can perscribe a left
+action $s*t$ and a right action $t*s$.  The centralizer is thus the set of elements
+for which the left regular action and the right regular action agree when \PMlinkescapetext{restricted}
+to $T$.  
+
+It is generally possible to have $s*t$ not lie in $T$ for $s\in C_S(T)$ and
+$t\in T$, and likewise, it is also possible that if $s,s'\in C_S(T)$ that $s*s'\neq s'*s$.
+Therefore it should not be presumed that the centralizer is central.
+
+With further axioms on the \PMlinkescapetext{type} of operation we can deduce certain natural \PMlinkescapetext{properties}
+for the set $C_S(T)$.
+
+\begin{prop}
+\begin{enumerate}
+\item If $A\subseteq B$, then $C_S(B)\subseteq C_S(A)$.  In particular, $C_S(\varnothing)=S$.  
+\item If $S$ has an identity then $C_S(T)$ is non-empty.  In particular, in this case $Z(S)$ is non-empty. \footnote{An identity of $S$ is an element $e\in S$ such that $e*s=s*e$ for all $s\in S$.}
+\item If $S$ is associative and $s,s'\in C_S(T)$ then $s*s'\in C_S(T)$,
+we say then that $C_S(T)$ is closed to the binary operation of $S$.
+\item If $s\in C_S(T)$ and $s$ has an (strong) inverse $s^{-1}$, then
+$s^{-1}\in C_S(T)$.\footnote{We say an inverse is strong if $s^{-1}*(s*t)=t=(t*s)*s^{-1}$ for
+all $t\in S$.  If the operation is associative then this is given for free.  There
+are natural nonassociative operations with this property, such as alternative algebras.}
+\item If $S$ is commutative then $C_S(T)=S$.
+\item If $T$ is a subset of the center of $S$ then $C_S(T)=S$.
+\end{enumerate}
+\end{prop}
+
+Note that it is possible for $C_S(T)$ be a subset closed to the opertaion without the 
+assumption of associativity, as for example, when $S$ is commutative.
+
+
+\section{Centralizers in groups}
+
+In the category of groups the centralizer in a group $G$ of a subset $H$ can be redefined as:
+\begin{equation*}
+   C_G(H)=\{ g\in G : g^{-1} h g=h, \textnormal{ for all } h\in H\}.
+\end{equation*}
+If one regards conjugation as a group action $h^g:=g^{-1} hg$ then it follows that the
+centralizer is the same as the pointwise stabilizer in $G$ of $H$, where the action is
+of $G$ on itself by conjugation.  Because of this overlap, in some contexts the \PMlinkescapetext{term}
+centralizers is applied to the pointwise stabilizer of a set on which a group acts, \PMlinkescapetext{even}
+though this context no longer refers to the action of conjugation.  This
+is espeically common when there is a need to distinguish between the pointwise stabilizer
+and the setwise stabilizer.
+
+In this category, the centralizer is always a subgroup of $G$.  Furthermore, if $H$ is a normal
+subgroup of $G$, then so too is $C_G(H)$.
+
+\section{Centralizers in rings and algebras}
+
+For \PMlinkescapetext{uniformity} we treat rings as algebras over $\mathbb{Z}$ and now speak only of
+algebras, which will include nonassociative examples.
+
+In an algebra $A$ there is in fact two binary operations on the set $A$ in
+question.  Thus the abstract definition of the centralizer is ambiguous.  However, the additive
+operation of rings and algebras is always commutative and so any centralizer with respect to this
+operation is the \PMlinkescapetext{entire} set $A$.  Thus it is generally accepted practice to assume that centralizers
+in this context always refer to the multiplicative operation.  In this way we have the following
+properties.
+
+\begin{prop}
+Given an algebra $A$ over a commutative unital ring $R$ and a subset $B$ of $A$, then
+\begin{enumerate}
+\item $C_A(B)$ is a submodule of $A$.
+\item If $A$ is associative then $C_A(B)$ is a subalgebra.
+\item $Z(A)\leq C_A(B)$, in particular, if $A$ has a 1 then $1\in C_A(B)$ and so
+$R$ embeds in $C_A(B)$.
+\end{enumerate}
+\end{prop}
+
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+A centralizer in an algebra is also called a commutant.  This terminology is mostly used in algebras of operators in functional analysis.
+\item
+Let $R$ be a ring (or an algebra).  For every ordered pair $(a,b)$ of elements of $R$, we can define the \emph{additive commutator} of $(a,b)$ to be the element $ab-ba$, written $[a,b]$.  With this, one may alternatively define the centralizer of a set $S\subseteq R$ in a ring $R$ as $$C_R(S):=\{ r\in R\mid [r,s]=0 \textnormal{ for all }s\in S \}.$$  Of course, in this definition, two operations (multiplication and subtraction) are needed instead of one.  But the nice aspect about this definition is that one can ``measure'' commutativity of a ring by the additive commutation operation.  For example, one can show that, in a division ring, if every element additively commutes with every additive commutator, then the ring must be a field.
+\end{itemize}
+
+\section{Centralizers in Lie algebras}
+
+Suppose $\mathfrak{g}$ is a Lie aglebra over a commutative ring of characteristic not $2$.
+Given a subset $T$ of $\mathfrak{g}$, then $[s,t]=-[t,s]$ for $s\in \mathfrak{g}$ and $t\in T$ from the axioms
+of a Lie algebra multiplication.  Therefore whenever $[s,t]=[t,s]$ it follows that
+$-[t,s]=[t,s]$ so that $[t,s]=0$.  This motivates the more common redefinition of 
+the centralizer in a Lie algebra:
+\begin{equation*}
+   C_{\mathfrak{g}}(T)=\{ s\in \mathfrak{g} : [s,t]=0, \textnormal{ for all } t\in T\}.
+\end{equation*}
+Despite the incongruety in characteristic 2, this new definition replaces the original
+definition of centralizers for Lie algebras.  The centralizer of a Lie algebra is a subalgebra.
+
+When the Lie multiplication is regarded as a commutator, so $[a,b]=ab-ba$, for example
+it it universal enveloping algebra, then $0=[a,b]=ab-ba$ is the same as $ab=ba$ and so
+the centralizer of the Lie algebra coincides with the centralizer of the associative 
+envelope.
+
+
+\section{Centralizers in other nonassociative algebras}
+
+The centralizer need not be a subalgebra on account of the lack of associativity.
+There are instances of non-associative algebras where the centralizer is however
+a subalgebra nontheless, for example, Lie algebras as seen above.  In travial fashion, if
+an algebra is commutative then $C_A(B)=A$ and so the centralizer is a subalgebra
+but without any useful properties.  There is a suitable additional constraint
+to add to centralizers to force them to be subalgebras and carry with them
+more useful \PMlinkescapetext{information} in the commutative but nonassociative setting.
+
+We write $[a,b]$ for $ab-ba$, called the commutator in $A$ of $a,b\in A$ and also write
+$/a,b,c/$ for $(ab)c-a(bc)$ and call it the associator in $A$ of $a,b,c\in A$.\footnote{This notation
+for associators is non-standard but the standard $[a,b,c]=(ab)c-a(bc)$ is likely confusing given the 
+usual commutator notation used already.}  Then we
+can redefine the centralizer in $A$ of a subset $T$ of $A$ as
+\begin{equation*}
+   C_{A}(T)=\{ s\in A: [s,t]=0, /s',s,t/=/s',t,s/=/t,s',s/=0\textnormal{ for all } t\in T, s'\in A\}.
+\end{equation*}
+It follows that $C_A(T)$ is a subalgebra of $A$ on account of the added associator condition
+which forces the subset to be closed to the product.
+
+In alternative algebras, if any one of three associators is 0 then the other three are as well
+and so the definition reduces to $/s',s,t/=0$.  \PMlinkescapetext{Similar reductions} occur of other nonassociative
+algebras. 
+
+%%%%%
+%%%%%
+\end{document}

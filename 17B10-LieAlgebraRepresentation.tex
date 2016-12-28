@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LieAlgebraRepresentation}
+\pmcreated{2013-03-22 12:41:13}
+\pmmodified{2013-03-22 12:41:13}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Lie algebra representation}
+\pmrecord{16}{32966}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B10}
+\pmsynonym{representation}{LieAlgebraRepresentation}
+\pmrelated{Dimension3}
+\pmdefines{irreducible}
+\pmdefines{module}
+\pmdefines{dimension}
+\pmdefines{finite dimensional}
+\pmdefines{finite-dimensional}
+\pmdefines{infinite dimensional}
+\pmdefines{infinite-dimensional}
+\pmdefines{faithful}
+\pmdefines{direct sum of representations}
+
+\newcommand{\lag}{\mathfrak{g}}
+\newcommand{\ad}{\mathop{\mathrm{ad}}\nolimits}
+\newcommand{\End}{\mathop{\mathrm{End}}\nolimits}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{\PMlinkescapetext{{#1}}}
+\newcommand{\pln}[2]{\PMlinkname{#1}{#2}}
+\begin{document}
+A representation of a Lie algebra $\lag$ is a Lie algebra homomorphism
+$$\rho:\lag \rightarrow \End V,$$
+where $\End V$ is the commutator Lie
+algebra of some vector space $V$.  In other words, $\rho$ is a linear
+mapping that satisfies
+$$\rho([a,b]) = \rho(a)\rho(b)-\rho(b)\rho(a),\quad a,b\in\lag$$
+Alternatively, one calls $V$ a $\lag$-module, and calls $\rho(a),\,
+a\in \lag$ the action of $a$ on $V$.
+
+We call the representation {\em faithful} if $\rho$ is injective.
+
+A invariant subspace or sub-module $W\subset V$ is a subspace of $V$ satisfying $\rho(a)(W)\subset W$ for all $a\in\lag$.  A representation is
+called {\em irreducible} or simple if its only invariant subspaces are $\{0\}$
+and the whole representation.
+
+The dimension of $V$ is called the dimension of the representation.
+If $V$ is infinite-dimensional, then one speaks of an
+infinite-dimensional representation.
+
+Given a pair of representations, we can define a new representation, called the direct sum of the two given representations:
+
+If $\rho:\lag\to\End(V)$ and $\sigma:\lag\to\End(W)$ are representations, then $V\oplus W$ has the obvious Lie algebra action, by the embedding $\End(V)\times\End(W)\hookrightarrow\End(V\oplus W)$.
+%%%%%
+%%%%%
+\end{document}

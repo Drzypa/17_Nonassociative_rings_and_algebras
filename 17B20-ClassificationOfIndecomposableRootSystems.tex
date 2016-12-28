@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClassificationOfIndecomposableRootSystems}
+\pmcreated{2013-03-22 15:28:56}
+\pmmodified{2013-03-22 15:28:56}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{classification of indecomposable root systems}
+\pmrecord{6}{37337}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17B20}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+
+\newcommand{\Cset}{\mathbb{C}}
+\newcommand{\Eset}{\mathbf{E}}
+\newcommand{\Rset}{\mathbb{R}}
+\begin{document}
+There are four infinite families of indecomposable root systems :
+\begin{align*}
+A_n &=\{ \pm e_i\mp e_j \colon 1\leq i<j\leq n+1\};\\
+B_n &=\{\pm e_i\pm e_j \colon 1\leq i<j\leq n\}\cup \{ \pm e_i \colon
+1\leq i\leq n\};\\
+C_n &=\{\pm e_i\pm e_j \colon 1\leq i<j\leq n\}\cup\{\pm 2e_i \colon
+1\leq i\leq n\};\\
+D_n &=\{\pm e_i\pm e_j \colon 1\leq i<j\leq n\}
+\end{align*}
+
+The subscript on the name of the root system is the dimension of $\Eset$,
+the ambient Euclidean space containing the root system. In the case of
+$A_n$, the ambient $\Eset$ is the $n$-dimensional subspace perpendicular
+to $\sum_{i=1}^n e_i$.  In the other 3 cases, $\Eset=\Rset^n$.
+Throughout, we endow $\Rset^n$ with the standard Euclidean inner
+product, and let $e_i,\; 1\leq i\leq n$ denote the standard basis.
+
+As well, there are 5 exceptional, crystallographic root systems:
+\begin{align*}
+G_2 &=A_3 \cup \left\{ \pm\frac{1}{3}( 2 e_1 -e_2-e_3),
+\pm\frac{1}{3}( - e_1 +2e_2-e_3),\pm\frac{1}{3}( - e_1 -e_2+2e_3)\right\};\\
+F_4&=B_4 \cup \left\{ \frac{1}{2}(\pm e_1\pm e_2\pm e_3 \pm e_4)\right\};\\
+E_6&= A_6 \cup \left\{ \pm(e_7-e_8) \} \cup \{ \frac{1}{2}(
+\sum_{i=1}^6 (\pm e_i) \pm (e_7 - e_8)) \colon
+\text{4 minus signs}\right\};\\
+E_7&=A_8\cup \left\{\sum_{i=1}^8 (\pm e_i) \colon
+\text{4 minus signs}\right\};\\
+E_8&=D_8\cup \left\{\sum_{i=1}^8 (\pm e_i) \colon
+\text{even number of minus signs}\right\}.
+\end{align*}
+
+The following table indicates the cardinality of and the Lie algebras
+and Dynkin diagrams corresponding to the above root systems.
+  \begin{figure}[h]
+    \centering
+    \includegraphics{rootsys-diag}
+    \caption{Irreducible root systems and simple Lie algebras.}
+  \end{figure}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationsOnARingOfContinuousFunctions}
+\pmcreated{2013-03-22 18:37:25}
+\pmmodified{2013-03-22 18:37:25}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{derivations on a ring of continuous functions}
+\pmrecord{14}{41359}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{17A36}
+\pmclassification{msc}{16W25}
+\pmclassification{msc}{13N15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X$ be a topological space and denote by $\mathbb{R}$ the set of reals. Of course the set of all continuous functions $C(X,\mathbb{R})$ is a $\mathbb{R}$-algebra. Let $c\in\mathbb{R}$. By the symbol $\bar{c}$ we will denote constant function at $c$, i.e. $\bar{c}:X\to\mathbb{R}$ is defined by $\bar{c}(x)=c$.
+
+\textbf{Proposition.} If $D:C(X,\mathbb{R})\to C(X,\mathbb{R})$ is a $\mathbb{R}$-derivation, then $D(x)=\bar{0}$ for any $x\in C(X,\mathbb{R})$.
+
+\textit{Proof.} Step one. We will prove that $D(\bar{c})=\bar{0}$ for any $c\in\mathbb{R}$. Indeed $$D(\bar{1})=D(\bar{1}\cdot \bar{1})=\bar{1}\cdot D(\bar{1})+\bar{1}\cdot D(\bar{1})=D(\bar{1})+D(\bar{1})=2\cdot D(\bar{1})$$
+and thus $D(\bar{1})=\bar{0}$. Now from linearity of $D$ we obtain that $$D(\bar{c})=D(c\cdot\bar{1})=c\cdot D(\bar{1})=c\cdot\bar{0}=\bar{0}.$$ 
+
+Step two. If $f:X\to\mathbb{R}$ is continuous and $c\in\mathbb{R}$, then $f+\bar{c}$ is continuous and obviously $D(f)=D(f+\bar{c}).$ Moreover, if $x\in X$ then $D(f-\overline{f(x)})=D(f)$, but $(f-\overline{f(x)})(x)=0$. Thus we may assume that $f(x)=0$ for fixed $x\in X$.
+
+Let $x_0\in X$. Now we will restrict only to such maps $f:X\to\mathbb{R}$ that $f(x_0)=0$.
+
+Step three. We now decompose $f$ into sum of two nonnegative functions. Indeed, if $f:X\to\mathbb{R}$ is continuous, then define $f^{+},f^{-}:X\to\mathbb{R}$ by the formula:
+$$f^{+}(x)=\mathrm{max}(f(x),0);\ \ \ f^{-}(x)=\mathrm{max}(-f(x),0).$$
+Of course both $f^{-}$ and $f^{+}$ are continous, nonnegative and $f=f^{+}-f^{-}$. Thus $$D(f)=D(f^{+})-D(f^{-}),$$ so it is enough to show that $D(f)=\bar{0}$ only for nonnegative and continuous functions.
+
+Step four. Assume that $f:X\to\mathbb{R}$ is nonnegative, continuous and $f(x_0)=0$. Then there exists $g:X\to\mathbb{R}$ continuous such that $g^2=f$ (indeed $g=\sqrt{f}$ and it is well defined, continuous map, because $f$ was nonnegative). Then we have $$D(f)=D(g^2)=g\cdot D(g)+g\cdot D(g)=2\cdot g\cdot D(g).$$ Now we have $g(x_0)=\sqrt{f(x_0)}=0$ and thus $$D(f)(x_0)=2\cdot g(x_0)\cdot D(g)(x_0)=0.$$
+
+Now we can take any $x\in X$ and repeat steps two, three and four to get that for any $x\in X$ we have $$D(f)(x)=0$$ and thus $$D(f)=\bar{0},$$ which completes the proof. $\square$
+
+\textbf{Remark.} Note that this proof cannot be repeated if we (for example) consider the set of all smooth functions $C^{\infty}(M,\mathbb{R})$ on a smooth manifold $M$, because $f^{+}$, $f^{-}$ and $\sqrt{f}$ need not be smooth.
+%%%%%
+%%%%%
+\end{document}
