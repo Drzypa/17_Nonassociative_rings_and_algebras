@@ -1,0 +1,158 @@
+<!DOCTYPE html><html>
+<head>
+<title>modular theory</title>
+<!--Generated on Fri Feb  9 18:50:23 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">modular theory</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A representation of a group/algebra into <math id="p1.m1" class="ltx_Math" alttext="GL(V,k)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="p1.m2" class="ltx_Math" alttext="End_{k}V" display="inline"><mrow><mi>E</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><msub><mi>d</mi><mi>k</mi></msub><mo>⁢</mo><mi>V</mi></mrow></math>, <math id="p1.m3" class="ltx_Math" alttext="\mathfrak{gl}_{k}(V)" display="inline"><mrow><mi>𝔤</mi><mo>⁢</mo><msub><mi>𝔩</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>, etc. is called <em class="ltx_emph ltx_font_italic">modular</em> if the
+characteristic of <math id="p1.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is positive. An algebra <math id="p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is called
+<em class="ltx_emph ltx_font_italic">modular</em> if the characteristic of the field <math id="p1.m6" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>
+is positive (thus prime for some <math id="p1.m7" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.) As the algebra can be represented
+in <math id="p1.m8" class="ltx_Math" alttext="End_{k}A" display="inline"><mrow><mi>E</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><msub><mi>d</mi><mi>k</mi></msub><mo>⁢</mo><mi>A</mi></mrow></math> by left or right multiplication (often called the regular or
+adjoint representation) this definition
+matches the requirements for a modular representation.</p>
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Modular representations and modular theory in this sense should not be confused with modular forms from number theory. Though applications of one to another may exist, these two topics are generally unrelated.</span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Typically theory for representations over fields of characteristic 0 cannot be
+transplanted directly to modular representations. For example, Maschke’s theorem, Lie’s theorem, the use of the Killing form for a Lie algebra
+all fail in various ways in modular representations. There are two common obstructions in modular representations.</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">A theorem/formula in characteristic 0 makes use of rational fractions
+<math id="I1.i1.p1.m1" class="ltx_Math" alttext="a/b" display="inline"><mrow><mi>a</mi><mo>/</mo><mi>b</mi></mrow></math> where <math id="I1.i1.p1.m2" class="ltx_Math" alttext="p|b" display="inline"><mrow><mi>p</mi><mo stretchy="false">|</mo><mi>b</mi></mrow></math>. Thus the fraction causes division by 0 over characteristic
+<math id="I1.i1.p1.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. Examples of this obstruction include Maschke’s theorem and the definition
+of exponentials of nilpotent matrices.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">A theorem/formula involves polynomials which are inseparable, or have
+repeated roots over fields with positive characteristic. This is especially
+problematic when the polynomials are the minimal or characteristic polynomials of linear transformations for this causes the rational canonical form and Jordan canonical form of the transforms to change. Examples of this problem include Lie’s theorem.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">There are also two common workarounds for these obstructions.</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Treat the rational coefficients as formal coefficients. For example,
+start in characteristic 0 and define an integer subalgebra with basis elements of the form <math id="I2.i1.p1.m1" class="ltx_Math" alttext="\frac{x^{n}}{n!}" display="inline"><mfrac><msup><mi>x</mi><mi>n</mi></msup><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></math> (or similarly useful combinations.) Then tensor (over <math id="I2.i1.p1.m2" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>) the <math id="I2.i1.p1.m3" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>-subalgebra with <math id="I2.i1.p1.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>. Thus the fractions
+of the form <math id="I2.i1.p1.m5" class="ltx_Math" alttext="1/n!" display="inline"><mrow><mn>1</mn><mo>/</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></math> are not actually coefficients in <math id="I2.i1.p1.m6" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> but formal coefficients and so they do not cause division by 0. This technique is used in the theory
+of Chevalley groups over arbitrary fields as it allows for version of the
+exponential of a nilpotent element of a Lie algebra.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Make restrictions on the dimensions of the representation, for instance,
+<math id="I2.i2.p1.m1" class="ltx_Math" alttext="(p,\dim V)=1" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mrow><mo>dim</mo><mo>⁡</mo><mi>V</mi></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mn>1</mn></mrow></math> or <math id="I2.i2.p1.m2" class="ltx_Math" alttext="x^{n}=0" display="inline"><mrow><msup><mi>x</mi><mi>n</mi></msup><mo>=</mo><mn>0</mn></mrow></math> for <math id="I2.i2.p1.m3" class="ltx_Math" alttext="n&lt;p" display="inline"><mrow><mi>n</mi><mo>&lt;</mo><mi>p</mi></mrow></math> etc. Thus the division by 0 and polynomial oddities are avoided. For example, with Maschke’s theorem the solution is to
+assume that the characteristic <math id="I2.i2.p1.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> does not divide the order of the group <math id="I2.i2.p1.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>
+which is being represented. The second approach to insist on large <math id="I2.i2.p1.m6" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> often
+excludes <math id="I2.i2.p1.m7" class="ltx_Math" alttext="p=2,3" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mn>2</mn><mo>,</mo><mn>3</mn></mrow></mrow></math> but provides workable results for <math id="I2.i2.p1.m8" class="ltx_Math" alttext="p\geq 5" display="inline"><mrow><mi>p</mi><mo>≥</mo><mn>5</mn></mrow></math>, or 7, etc. Then the small prime cases are studied as exceptional examples.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">There is a third problem which can arise for modular representations which has no obvious work around. This is when the definition and/or theorems still work but their implications are useless.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">For example, with the Killing form of a Lie algebra we take the trace of a linear transformation. However, over characteristic <math id="p5.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> it is possible for the identity matrix to have trace 0, for example, in dimension <math id="p5.m2" class="ltx_Math" alttext="d=mp" display="inline"><mrow><mi>d</mi><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mi>p</mi></mrow></mrow></math> for any integer <math id="p5.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>. This situation cannot be be avoided as easily as with Maschke’s theorem by assuming restrictions on the dimension of the representation. For we can use <math id="p5.m4" class="ltx_Math" alttext="d=2" display="inline"><mrow><mi>d</mi><mo>=</mo><mn>2</mn></mrow></math> and the diagonal matrix <math id="p5.m5" class="ltx_Math" alttext="Diag(1,p-1)" display="inline"><mrow><mi>D</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> to obtain a similar problem with the trace. And this problem embeds into all higher dimensions thus a straight forward use of trace would work only in 1 dimensional representations.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">There is no problem with the definition of the Killing form for modular representations but the results may no longer be applicable. In these situations usually entirely new approaches are required.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">modular theory</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ModularTheory</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:26:45</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:26:45</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 17B99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">RestrictedLieAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">modular theory</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">modular representation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:50:23 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

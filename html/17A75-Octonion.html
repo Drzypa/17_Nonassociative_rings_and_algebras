@@ -1,0 +1,236 @@
+<!DOCTYPE html><html>
+<head>
+<title>octonion</title>
+<!--Generated on Fri Feb  9 18:48:20 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">octonion</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="\mathbb{H}" display="inline"><mi>ℍ</mi></math> be the quaternions over the reals <math id="p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. Apply the
+Cayley-Dickson construction to <math id="p1.m3" class="ltx_Math" alttext="\mathbb{H}" display="inline"><mi>ℍ</mi></math> once, and we obtain an algebra,
+variously called <em class="ltx_emph ltx_font_italic">Cayley algebra</em>, <em class="ltx_emph ltx_font_italic">the octonion algebra</em>, or simply <em class="ltx_emph ltx_font_italic">the octonions</em>, over <math id="p1.m4" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. Specifically the construction is carried out as follows:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Form the vector space <math id="I1.i1.p1.m1" class="ltx_Math" alttext="\mathbb{O}=\mathbb{H}\oplus\mathbb{H}\mathbf{k}" display="inline"><mrow><mi>𝕆</mi><mo>=</mo><mrow><mi>ℍ</mi><mo>⊕</mo><mrow><mi>ℍ</mi><mo>⁢</mo><mi>𝐤</mi></mrow></mrow></mrow></math>; any element of
+<math id="I1.i1.p1.m2" class="ltx_Math" alttext="\mathbb{O}" display="inline"><mi>𝕆</mi></math> can be written as <math id="I1.i1.p1.m3" class="ltx_Math" alttext="a+b\mathbf{k}" display="inline"><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>𝐤</mi></mrow></mrow></math>, where <math id="I1.i1.p1.m4" class="ltx_Math" alttext="a,b\in\mathbb{H}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℍ</mi></mrow></math>;</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Define a binary operation on <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\mathbb{O}" display="inline"><mi>𝕆</mi></math> called <em class="ltx_emph ltx_font_italic">the multiplication in
+<math id="I1.i2.p1.m2" class="ltx_Math" alttext="\mathbb{O}" display="inline"><mi mathvariant="normal">O</mi></math></em> by</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="(a+b\mathbf{k})(c+d\mathbf{k}):=(ac-\overline{d}b)+(da+b\overline{c})\mathbf{k}," display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>𝐤</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>𝐤</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>c</mi></mrow><mo>-</mo><mrow><mover accent="true"><mi>d</mi><mo>¯</mo></mover><mo>⁢</mo><mi>b</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mover accent="true"><mi>c</mi><mo>¯</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>𝐤</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I1.i2.p1.m3" class="ltx_Math" alttext="a,b,c,d\in\mathbb{H}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi></mrow><mo>∈</mo><mi>ℍ</mi></mrow></math>, and <math id="I1.i2.p1.m4" class="ltx_Math" alttext="\overline{c}" display="inline"><mover accent="true"><mi>c</mi><mo>¯</mo></mover></math> is the quaternionic conjugation
+of <math id="I1.i2.p1.m5" class="ltx_Math" alttext="c\in\mathbb{H}" display="inline"><mrow><mi>c</mi><mo>∈</mo><mi>ℍ</mi></mrow></math>. When <math id="I1.i2.p1.m6" class="ltx_Math" alttext="b=d=0" display="inline"><mrow><mi>b</mi><mo>=</mo><mi>d</mi><mo>=</mo><mn>0</mn></mrow></math>, the multiplication is reduced the
+multiplication in <math id="I1.i2.p1.m7" class="ltx_Math" alttext="\mathbb{H}" display="inline"><mi>ℍ</mi></math>. In addition, the multiplication rule above
+imply the following:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle a(d\mathbf{k})=(da)\mathbf{k}" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>d</mi><mo>⁢</mo><mi>𝐤</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>d</mi><mo>⁢</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>𝐤</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle(b\mathbf{k})c=(b\overline{c})\mathbf{k}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>⁢</mo><mi>𝐤</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>c</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>⁢</mo><mover accent="true"><mi>c</mi><mo>¯</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>𝐤</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle(b\mathbf{k})(d\mathbf{k})=-\overline{d}b." display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>⁢</mo><mi>𝐤</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>d</mi><mo>⁢</mo><mi>𝐤</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mover accent="true"><mi>d</mi><mo>¯</mo></mover><mo>⁢</mo><mi>b</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">In particular, in the last equation, if <math id="I1.i2.p1.m8" class="ltx_Math" alttext="b=d=1" display="inline"><mrow><mi>b</mi><mo>=</mo><mi>d</mi><mo>=</mo><mn>1</mn></mrow></math>, <math id="I1.i2.p1.m9" class="ltx_Math" alttext="\mathbf{k}^{2}=-1" display="inline"><mrow><msup><mi>𝐤</mi><mn>2</mn></msup><mo>=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Define a unary operation on <math id="I1.i3.p1.m1" class="ltx_Math" alttext="\mathbb{O}" display="inline"><mi>𝕆</mi></math> called <em class="ltx_emph ltx_font_italic">the octonionic
+conjugation in <math id="I1.i3.p1.m2" class="ltx_Math" alttext="\mathbb{O}" display="inline"><mi mathvariant="normal">O</mi></math></em> by</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\overline{a+b\mathbf{k}}:=\overline{a}-b\mathbf{k}," display="block"><mrow><mrow><mover accent="true"><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>𝐤</mi></mrow></mrow><mo>¯</mo></mover><mo>:=</mo><mrow><mover accent="true"><mi>a</mi><mo>¯</mo></mover><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>𝐤</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I1.i3.p1.m3" class="ltx_Math" alttext="a,b\in\mathbb{H}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℍ</mi></mrow></math>.
+Clearly, the octonionic conjugation is an involution (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Involution2</span>)
+(<math id="I1.i3.p1.m4" class="ltx_Math" alttext="\overline{\overline{x}}=x" display="inline"><mrow><mover accent="true"><mover accent="true"><mi>x</mi><mo>¯</mo></mover><mo>¯</mo></mover><mo>=</mo><mi>x</mi></mrow></math>).</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Finally, define a unary operation <math id="I1.i4.p1.m1" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> on <math id="I1.i4.p1.m2" class="ltx_Math" alttext="\mathbb{O}" display="inline"><mi>𝕆</mi></math> called <em class="ltx_emph ltx_font_italic">the norm in
+<math id="I1.i4.p1.m3" class="ltx_Math" alttext="\mathbb{O}" display="inline"><mi mathvariant="normal">O</mi></math></em> by <math id="I1.i4.p1.m4" class="ltx_Math" alttext="N(x):=x\overline{x}" display="inline"><mrow><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mi>x</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo>¯</mo></mover></mrow></mrow></math>, where <math id="I1.i4.p1.m5" class="ltx_Math" alttext="x\in\mathbb{O}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>𝕆</mi></mrow></math>. Write
+<math id="I1.i4.p1.m6" class="ltx_Math" alttext="x=a+b\mathbf{k}" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>𝐤</mi></mrow></mrow></mrow></math>, then</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="N(x)=(a+b\mathbf{k})(\overline{a}-b\mathbf{k})=(a\overline{a}+\overline{b}b)+(%
+-ba+b\overline{\overline{a}})\mathbf{k}=a\overline{a}+b\overline{b}\geq 0." display="block"><mrow><mrow><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>𝐤</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>a</mi><mo>¯</mo></mover><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>𝐤</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mover accent="true"><mi>a</mi><mo>¯</mo></mover></mrow><mo>+</mo><mrow><mover accent="true"><mi>b</mi><mo>¯</mo></mover><mo>⁢</mo><mi>b</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>a</mi></mrow></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mover accent="true"><mover accent="true"><mi>a</mi><mo>¯</mo></mover><mo>¯</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>𝐤</mi></mrow></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mover accent="true"><mi>a</mi><mo>¯</mo></mover></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mover accent="true"><mi>b</mi><mo>¯</mo></mover></mrow></mrow><mo>≥</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is not hard to see that <math id="I1.i4.p1.m7" class="ltx_Math" alttext="N(x)=0" display="inline"><mrow><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> iff <math id="I1.i4.p1.m8" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">The above four (actually, only the first two suffice) steps makes
+<math id="p1.m5" class="ltx_Math" alttext="\mathbb{O}" display="inline"><mi>𝕆</mi></math> into an <math id="p1.m6" class="ltx_Math" alttext="8" display="inline"><mn>8</mn></math>-dimensional algebra over <math id="p1.m7" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> such that <math id="p1.m8" class="ltx_Math" alttext="\mathbb{H}" display="inline"><mi>ℍ</mi></math> is
+embedded as a subalgebra.
+
+<br class="ltx_break">
+<br class="ltx_break">With the last two steps, one can define the inverse of a non-zero
+element <math id="p1.m9" class="ltx_Math" alttext="x\in\mathbb{O}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>𝕆</mi></mrow></math> by</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="x^{-1}:=\frac{\overline{x}}{N(x)}" display="block"><mrow><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>:=</mo><mfrac><mover accent="true"><mi>x</mi><mo>¯</mo></mover><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so that
+<math id="p1.m10" class="ltx_Math" alttext="xx^{-1}=x^{-1}x=1" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>=</mo><mrow><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mn>1</mn></mrow></math>. Since <math id="p1.m11" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is arbitrary, <math id="p1.m12" class="ltx_Math" alttext="\mathbb{O}" display="inline"><mi>𝕆</mi></math> has no zero
+divisors. Upon checking that <math id="p1.m13" class="ltx_Math" alttext="x^{-1}(xy)=y=(yx)x^{-1}" display="inline"><mrow><mrow><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>, the non-associative algebra <math id="p1.m14" class="ltx_Math" alttext="\mathbb{O}" display="inline"><mi>𝕆</mi></math> is turned into a division algebra.
+
+<br class="ltx_break">
+<br class="ltx_break">Since <math id="p1.m15" class="ltx_Math" alttext="N(x)\geq 0" display="inline"><mrow><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mn>0</mn></mrow></math> for any <math id="p1.m16" class="ltx_Math" alttext="x\in\mathbb{O}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>𝕆</mi></mrow></math>, we can define a non-negative
+real-valued function <math id="p1.m17" class="ltx_Math" alttext="\lVert\cdot\rVert" display="inline"><mrow><mo fence="true" stretchy="false">∥</mo><mo>⋅</mo><mo fence="true" stretchy="false">∥</mo></mrow></math> on <math id="p1.m18" class="ltx_Math" alttext="\mathbb{O}" display="inline"><mi>𝕆</mi></math> by <math id="p1.m19" class="ltx_Math" alttext="\lVert x\rVert=\sqrt{N(x)}" display="inline"><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mi>x</mi><mo fence="true" stretchy="false">∥</mo></mrow><mo>=</mo><msqrt><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></math>. This is clearly well-defined and <math id="p1.m20" class="ltx_Math" alttext="\lVert x\rVert=0" display="inline"><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mi>x</mi><mo fence="true" stretchy="false">∥</mo></mrow><mo>=</mo><mn>0</mn></mrow></math> iff
+<math id="p1.m21" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>. In addition, it is not hard to see that, for any <math id="p1.m22" class="ltx_Math" alttext="r\in\mathbb{R}" display="inline"><mrow><mi>r</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>
+and <math id="p1.m23" class="ltx_Math" alttext="x\in\mathbb{O}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>𝕆</mi></mrow></math>, <math id="p1.m24" class="ltx_Math" alttext="\lVert rx\rVert=\lvert r\rvert\lVert x\rVert" display="inline"><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mi>r</mi><mo>⁢</mo><mi>x</mi></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>=</mo><mrow><mrow><mo fence="true" stretchy="false">|</mo><mi>r</mi><mo fence="true" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mi>x</mi><mo fence="true" stretchy="false">∥</mo></mrow></mrow></mrow></math>, and that <math id="p1.m25" class="ltx_Math" alttext="\lVert\cdot\rVert" display="inline"><mrow><mo fence="true" stretchy="false">∥</mo><mo>⋅</mo><mo fence="true" stretchy="false">∥</mo></mrow></math>
+satisfies the triangular inequality. This makes <math id="p1.m26" class="ltx_Math" alttext="\mathbb{O}" display="inline"><mi>𝕆</mi></math> into a normed
+division algebra.
+
+<br class="ltx_break">
+<br class="ltx_break">Since the multiplication in <math id="p1.m27" class="ltx_Math" alttext="\mathbb{H}" display="inline"><mi>ℍ</mi></math> is noncommutative, <math id="p1.m28" class="ltx_Math" alttext="\mathbb{O}" display="inline"><mi>𝕆</mi></math> is
+noncommutative. In fact, if we write <math id="p1.m29" class="ltx_Math" alttext="\mathbb{H}=\mathbb{C}\oplus\mathbb{C}\mathbf{j}" display="inline"><mrow><mi>ℍ</mi><mo>=</mo><mrow><mi>ℂ</mi><mo>⊕</mo><mrow><mi>ℂ</mi><mo>⁢</mo><mi>𝐣</mi></mrow></mrow></mrow></math>,
+where <math id="p1.m30" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> are the complex numbers and <math id="p1.m31" class="ltx_Math" alttext="\mathbf{j}^{2}=-1" display="inline"><mrow><msup><mi>𝐣</mi><mn>2</mn></msup><mo>=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>, then
+<math id="p1.m32" class="ltx_Math" alttext="B=\{1,\mathbf{i},\mathbf{j},\mathbf{ij}\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi>𝐢</mi><mo>,</mo><mi>𝐣</mi><mo>,</mo><mi>𝐢𝐣</mi><mo stretchy="false">}</mo></mrow></mrow></math> is a basis
+for the vector space <math id="p1.m33" class="ltx_Math" alttext="\mathbb{H}" display="inline"><mi>ℍ</mi></math> over <math id="p1.m34" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. With the introduction
+of <math id="p1.m35" class="ltx_Math" alttext="\mathbf{k}\in\mathbb{O}" display="inline"><mrow><mi>𝐤</mi><mo>∈</mo><mi>𝕆</mi></mrow></math>, we quickly check that <math id="p1.m36" class="ltx_Math" alttext="\mathbf{k}" display="inline"><mi>𝐤</mi></math>
+anti-commute with the non-real basis elements in <math id="p1.m37" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\mathbf{ik=-ki},\qquad\mathbf{jk=-kj},\qquad\mathbf{(ij)k=-k(ij)}." display="block"><mrow><mrow><mrow><mi>𝐢𝐤</mi><mo>=</mo><mrow><mo>-</mo><mi>𝐤𝐢</mi></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>𝐣𝐤</mi><mo>=</mo><mrow><mo>-</mo><mi>𝐤𝐣</mi></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>𝐢𝐣</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>𝐤</mi></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mi>𝐤</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐢𝐣</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Furthermore, one checks that <math id="p1.m38" class="ltx_Math" alttext="\mathbf{i(jk)=(ji)k=-(ij)k}" display="inline"><mrow><mrow><mi>𝐢</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐣𝐤</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mi>𝐣𝐢</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>𝐤</mi></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mi>𝐢𝐣</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>𝐤</mi></mrow></mrow></mrow></math>, so that
+<math id="p1.m39" class="ltx_Math" alttext="\mathbb{O}" display="inline"><mi>𝕆</mi></math> is not associative.
+
+<br class="ltx_break">
+<br class="ltx_break">Since <math id="p1.m40" class="ltx_Math" alttext="\mathbb{O}=\mathbb{H}\oplus\mathbb{H}\mathbf{k}" display="inline"><mrow><mi>𝕆</mi><mo>=</mo><mrow><mi>ℍ</mi><mo>⊕</mo><mrow><mi>ℍ</mi><mo>⁢</mo><mi>𝐤</mi></mrow></mrow></mrow></math>, the set <math id="p1.m41" class="ltx_Math" alttext="\{1,\mathbf{i,j,ij,k,ik,jk,(ij)k}\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi>𝐢</mi><mo>,</mo><mi>𝐣</mi><mo>,</mo><mi>𝐢𝐣</mi><mo>,</mo><mi>𝐤</mi><mo>,</mo><mi>𝐢𝐤</mi><mo>,</mo><mi>𝐣𝐤</mi><mo>,</mo><mrow><mrow><mo stretchy="false">(</mo><mi>𝐢𝐣</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>𝐤</mi></mrow><mo stretchy="false">}</mo></mrow></math>(<math id="p1.m42" class="ltx_Math" alttext="=B\cup B\mathbf{k}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>B</mi><mo>∪</mo><mrow><mi>B</mi><mo>⁢</mo><mi>𝐤</mi></mrow></mrow></mrow></math>) is a
+basis for <math id="p1.m43" class="ltx_Math" alttext="\mathbb{O}" display="inline"><mi>𝕆</mi></math> over <math id="p1.m44" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. A less messy way to represent these basis
+elements is done the following assignment:</p>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">octonion</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Octonion</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:21:42</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:21:42</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 17A75</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 17D05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Cayley algebra</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TheoremsOnSumsOfSquares</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DivisionAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">octonion algebra</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t"><span class="ltx_ERROR undefined">\@unrecurse</span></th>
+<td class="ltx_td ltx_border_t"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:48:20 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

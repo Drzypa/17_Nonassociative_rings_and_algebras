@@ -1,0 +1,252 @@
+<!DOCTYPE html><html>
+<head>
+<title>Lie algebra</title>
+<!--Generated on Fri Feb  9 18:50:13 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Lie algebra</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A <span class="ltx_text ltx_font_italic">Lie algebra</span> over a field <math id="p1.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is a vector space <math id="p1.m2" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math> with a bilinear map <math id="p1.m3" class="ltx_Math" alttext="[\ ,\ ]:\mathfrak{g}\times\mathfrak{g}\to\mathfrak{g}" display="inline"><mrow><mrow><mo rspace="7.5pt" stretchy="false">[</mo><mo rspace="7.5pt">,</mo><mo stretchy="false">]</mo></mrow><mo>:</mo><mi>𝔤</mi><mo>×</mo><mi>𝔤</mi><mo>→</mo><mi>𝔤</mi></mrow></math>, called the <span class="ltx_text ltx_font_italic">Lie bracket</span> and denoted <math id="p1.m4" class="ltx_Math" alttext="(x,y)\mapsto[x,y]" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>↦</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></mrow></math>. It is required to satisfy:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="[x,x]=0" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="I1.i1.p1.m2" class="ltx_Math" alttext="x\in\mathfrak{g}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>𝔤</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">Jacobi identity</span>: <math id="I1.i2.p1.m1" class="ltx_Math" alttext="[x,[y,z]]+[y,[z,x]]+[z,[x,y]]=0" display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>x</mi><mo>,</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">]</mo></mrow><mo>+</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo>,</mo><mrow><mo stretchy="false">[</mo><mi>z</mi><mo>,</mo><mi>x</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">]</mo></mrow><mo>+</mo><mrow><mo stretchy="false">[</mo><mi>z</mi><mo>,</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="I1.i2.p1.m2" class="ltx_Math" alttext="x,y,z\in\mathfrak{g}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><mi>𝔤</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Subalgebras &amp; Ideals</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">A vector subspace <math id="S1.p1.m1" class="ltx_Math" alttext="\mathfrak{h}" display="inline"><mi>𝔥</mi></math> of the Lie algebra <math id="S1.p1.m2" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math> is a <span class="ltx_text ltx_font_italic">subalgebra</span> if <math id="S1.p1.m3" class="ltx_Math" alttext="\mathfrak{h}" display="inline"><mi>𝔥</mi></math> is closed under the Lie bracket operation, or, equivalently, if <math id="S1.p1.m4" class="ltx_Math" alttext="\mathfrak{h}" display="inline"><mi>𝔥</mi></math> itself is a Lie algebra under the same bracket operation as <math id="S1.p1.m5" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math>. An <span class="ltx_text ltx_font_italic">ideal</span> of <math id="S1.p1.m6" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math> is a subspace <math id="S1.p1.m7" class="ltx_Math" alttext="\mathfrak{h}" display="inline"><mi>𝔥</mi></math> for which <math id="S1.p1.m8" class="ltx_Math" alttext="[x,y]\in\mathfrak{h}" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">]</mo></mrow><mo>∈</mo><mi>𝔥</mi></mrow></math> whenever either <math id="S1.p1.m9" class="ltx_Math" alttext="x\in\mathfrak{h}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>𝔥</mi></mrow></math> or <math id="S1.p1.m10" class="ltx_Math" alttext="y\in\mathfrak{h}" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>𝔥</mi></mrow></math>. Note that every ideal is also a subalgebra.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Some general examples of subalgebras:</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">center</span> of <math id="I2.i1.p1.m1" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math>, defined by <math id="I2.i1.p1.m2" class="ltx_Math" alttext="Z(\mathfrak{g}):=\{x\in\mathfrak{g}\mid[x,y]=0\text{for all }y\in\mathfrak{g}\}" display="inline"><mrow><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔤</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>𝔤</mi></mrow><mo>∣</mo><mrow><mrow><mo stretchy="false">[</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mn>0</mn><mo>⁢</mo><mtext>for all </mtext><mo>⁢</mo><mi>y</mi></mrow><mo>∈</mo><mi>𝔤</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. It is an ideal of <math id="I2.i1.p1.m3" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">normalizer</span> of a subalgebra <math id="I2.i2.p1.m1" class="ltx_Math" alttext="\mathfrak{h}" display="inline"><mi>𝔥</mi></math> is the set <math id="I2.i2.p1.m2" class="ltx_Math" alttext="N(\mathfrak{h}):=\{x\in\mathfrak{g}\mid[x,\mathfrak{h}]\subset\mathfrak{h}\}" display="inline"><mrow><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔥</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>𝔤</mi></mrow><mo>∣</mo><mrow><mrow><mo stretchy="false">[</mo><mi>x</mi><mo>,</mo><mi>𝔥</mi><mo stretchy="false">]</mo></mrow><mo>⊂</mo><mi>𝔥</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. The Jacobi identity guarantees that <math id="I2.i2.p1.m3" class="ltx_Math" alttext="N(\mathfrak{h})" display="inline"><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔥</mi><mo stretchy="false">)</mo></mrow></mrow></math> is always a subalgebra of <math id="I2.i2.p1.m4" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math>.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">centralizer</span> of a subset <math id="I2.i3.p1.m1" class="ltx_Math" alttext="X\subset\mathfrak{g}" display="inline"><mrow><mi>X</mi><mo>⊂</mo><mi>𝔤</mi></mrow></math> is the set <math id="I2.i3.p1.m2" class="ltx_Math" alttext="C(X):=\{x\in\mathfrak{g}\mid[x,X]=0\}" display="inline"><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>𝔤</mi></mrow><mo>∣</mo><mrow><mrow><mo stretchy="false">[</mo><mi>x</mi><mo>,</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Again, the Jacobi identity implies that <math id="I2.i3.p1.m3" class="ltx_Math" alttext="C(X)" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a subalgebra of <math id="I2.i3.p1.m4" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Homomorphisms</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Given two Lie algebras <math id="S2.p1.m1" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math> and <math id="S2.p1.m2" class="ltx_Math" alttext="\mathfrak{g}^{\prime}" display="inline"><msup><mi>𝔤</mi><mo>′</mo></msup></math> over the field <math id="S2.p1.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>, a <span class="ltx_text ltx_font_italic">homomorphism</span> from <math id="S2.p1.m4" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math> to <math id="S2.p1.m5" class="ltx_Math" alttext="\mathfrak{g}^{\prime}" display="inline"><msup><mi>𝔤</mi><mo>′</mo></msup></math> is a linear transformation <math id="S2.p1.m6" class="ltx_Math" alttext="\phi:\mathfrak{g}\to\mathfrak{g}^{\prime}" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><mi>𝔤</mi><mo>→</mo><msup><mi>𝔤</mi><mo>′</mo></msup></mrow></mrow></math> such that <math id="S2.p1.m7" class="ltx_Math" alttext="\phi([x,y])=[\phi(x),\phi(y)]" display="inline"><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></math> for all <math id="S2.p1.m8" class="ltx_Math" alttext="x,y\in\mathfrak{g}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>𝔤</mi></mrow></math>. An injective homomorphism is called a <span class="ltx_text ltx_font_italic">monomorphism</span>, and a surjective homomorphism is called an <span class="ltx_text ltx_font_italic">epimorphism</span>.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">kernel</span> of a homomorphism <math id="S2.p2.m1" class="ltx_Math" alttext="\phi:\mathfrak{g}\to\mathfrak{g}^{\prime}" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><mi>𝔤</mi><mo>→</mo><msup><mi>𝔤</mi><mo>′</mo></msup></mrow></mrow></math> (considered as a linear transformation) is denoted <math id="S2.p2.m2" class="ltx_Math" alttext="\ker(\phi)" display="inline"><mrow><mi>ker</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></math>. It is always an ideal in <math id="S2.p2.m3" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math>.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Examples</h2>
+
+<div id="S3.p1" class="ltx_para">
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Any vector space can be made into a Lie algebra simply by setting <math id="I3.i1.p1.m1" class="ltx_Math" alttext="[x,y]=0" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mn>0</mn></mrow></math> for all vectors <math id="I3.i1.p1.m2" class="ltx_Math" alttext="x,y" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow></math>. The resulting Lie algebra is called an <span class="ltx_text ltx_font_italic">abelian</span> Lie algebra.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I3.i2.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a Lie group, then the tangent space at the identity forms a Lie algebra over the real numbers.</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i3.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math> with the cross product operation is a nonabelian three dimensional Lie algebra over <math id="I3.i3.p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Historical Note</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Lie algebras are so-named in honour of Sophus Lie, a Norwegian
+mathematician who pioneered the study of these mathematical objects.
+Lie’s discovery was tied to his investigation of continuous
+transformation groups and symmetries. One joint project with Felix
+Klein called for the classification of all finite-dimensional groups
+acting on the plane. The task seemed hopeless owing to the generally
+non-linear nature of such group actions. However, Lie was able to
+solve the problem by remarking that a transformation group can be
+locally reconstructed from its corresponding “infinitesimal
+generators”, that is to say vector fields corresponding to various
+1-parameter subgroups. In terms of this geometric correspondence, the
+group composition operation manifests itself as the bracket of vector
+fields, and this is very much a linear operation. Thus the task of
+classifying group actions in the plane became the task of classifying
+all finite-dimensional Lie algebras of planar vector field; a project
+that Lie brought to a successful conclusion.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">This “linearization trick” proved to be incredibly fruitful and led
+to great advances in geometry and differential equations. Such
+advances are based, however, on various results from the theory of Lie
+algebras. Lie was the first to make significant contributions to this
+purely algebraic theory, but he was surely not the last.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Lie algebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LieAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:03:36</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:03:36</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">djao (24)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">djao (24)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">18</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">djao (24)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 17B99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CommutatorBracket</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LieGroup</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">UniversalEnvelopingAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RootSystem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SimpleAndSemiSimpleLieAlgebras2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Jacobi identity</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">subalgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ideal</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">normalizer</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">centralizer</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">kernel</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">homomorphism</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">center</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">centre</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">abelian Lie algebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">abelian</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:50:13 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
